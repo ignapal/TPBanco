@@ -1,0 +1,11 @@
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.AssemblyInfoInputs.cache
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.AssemblyInfo.cs
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.csproj.CoreCompileInputs.cache
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\bin\Debug\net5.0\BancoBackend.deps.json
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\bin\Debug\net5.0\BancoBackend.dll
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\bin\Debug\net5.0\ref\BancoBackend.dll
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\bin\Debug\net5.0\BancoBackend.pdb
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.dll
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\ref\BancoBackend.dll
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.pdb

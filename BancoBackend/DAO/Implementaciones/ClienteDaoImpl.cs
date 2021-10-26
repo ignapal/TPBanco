@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoBackend.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,11 @@ using System.Threading.Tasks;
 
 namespace BancoBackend.DAO.Implementaciones
 {
-    class ClienteDaoImpl
+    class ClienteDaoImpl : IClienteDao
     {
+        public Cliente GetCliente()
+        {
+            return HelperDao.GetInstancia().GetCliente();
+        }
     }
 }

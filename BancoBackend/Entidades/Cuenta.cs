@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BancoBackend.Entidades
 {
-    class Cuenta
+    public class Cuenta
     {
         public decimal Cbu { get; set; }
         public decimal Saldo { get; set; }

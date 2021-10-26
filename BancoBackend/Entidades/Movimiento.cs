@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BancoBackend.Entidades
 {
-    class Movimiento
+    public class Movimiento
     {
         public int IdMovimiento { get; set; }
         public decimal CbuOrigen { get; set; }
