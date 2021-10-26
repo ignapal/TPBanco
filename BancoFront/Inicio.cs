@@ -25,11 +25,19 @@ namespace BancoFront
         {
             await GetCliente();
             loader.Visible = false;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (btnInicio.Text.Trim().Equals("Ingresar"))
+            {
 
+            }
+            else
+            {
+
+            }
         }
 
         private async Task GetCliente(){
