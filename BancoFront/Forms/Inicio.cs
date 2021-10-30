@@ -31,7 +31,7 @@ namespace BancoFront
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-
+            new Registro().ShowDialog();
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)

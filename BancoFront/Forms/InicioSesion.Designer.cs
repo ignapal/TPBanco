@@ -37,6 +37,7 @@ namespace BancoFront.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.btnIniciar = new System.Windows.Forms.Button();
             this.btnVerPass = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -92,7 +93,7 @@ namespace BancoFront.Forms
             this.btnIniciar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIniciar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnIniciar.Location = new System.Drawing.Point(334, 368);
+            this.btnIniciar.Location = new System.Drawing.Point(260, 372);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(121, 45);
             this.btnIniciar.TabIndex = 11;
@@ -113,12 +114,26 @@ namespace BancoFront.Forms
             this.btnVerPass.UseVisualStyleBackColor = false;
             this.btnVerPass.Click += new System.EventHandler(this.btnVerPass_Click);
             // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVolver.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVolver.Location = new System.Drawing.Point(419, 372);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(121, 45);
+            this.btnVolver.TabIndex = 18;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // InicioSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnVerPass);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.txtContrasenia);
@@ -147,5 +162,6 @@ namespace BancoFront.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Button btnVerPass;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

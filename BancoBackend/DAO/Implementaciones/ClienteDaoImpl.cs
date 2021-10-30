@@ -8,12 +8,8 @@ using System.Threading.Tasks;
 
 namespace BancoBackend.DAO.Implementaciones
 {
-    class ClienteDaoImpl : IClienteDao
+    class ClienteDaoImpl
     {
        
-        public bool InsertarCliente(Cliente cliente)
-        {
-            return HelperDao.GetInstancia().InsertarCliente(cliente);
-        }
     }
 }

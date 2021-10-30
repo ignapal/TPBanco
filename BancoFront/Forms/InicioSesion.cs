@@ -36,20 +36,21 @@ namespace BancoFront.Forms
             usuario.Nombre = txtUsuario.Text;
             usuario.Contrasenia = txtContrasenia.Text;
 
-            string url = "https://localhost:5001/api/Usuario";
+            string url = "https://localhost:5001/obtenerUsuario";
             string usuarioJson = JsonConvert.SerializeObject(usuario);
             StringContent usuarioBody = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
 
             var response = await HttpCliSingleton.GetClient().PostAsync(url, usuarioBody);
             var body = await response.Content.ReadAsStringAsync();
 
-            Usuario usuario1 = JsonConvert.DeserializeObject<Usuario>(body);
-            if (usuario1 != null)
+            try
             {
+                Usuario usuario1 = JsonConvert.DeserializeObject<Usuario>(body);
                 MessageBox.Show("Ponele que soy el programa", "dou");
             }
-            else {
-                MessageBox.Show("Credenciales Inválidas","Reintente",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            catch (Exception)
+            {
+                MessageBox.Show("Credenciales Inválidas", "Reintente", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
         }
@@ -69,6 +70,11 @@ namespace BancoFront.Forms
                 txtContrasenia.UseSystemPasswordChar = false;
             }
             
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

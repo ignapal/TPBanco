@@ -30,5 +30,11 @@ namespace BancoBackend.Service.UsuarioServ
                 return null;
             }
         }
+
+        public bool InsertarUsuario(Usuario usuario)
+        {
+            usuarioDao = new UsuarioDaoImpl();
+            return usuarioDao.InsertarUsuario(usuario);
+        }
     }
 }

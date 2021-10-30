@@ -19,6 +19,14 @@ namespace BancoBackend.DAO.Implementaciones
 
             return HelperDao.GetInstancia().GetTable("SP_OBTENER_USUARIO", parametros);
         }
-        
+
+        public bool InsertarUsuario(Usuario usuario)
+        {
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            parametros.Add("@nombreUsuario", usuario.Nombre);
+            parametros.Add("@contrasenia", usuario.Contrasenia);
+
+            return HelperDao.GetInstancia().InsertarEntidad("SP_INSERTAR_USUARIO", parametros);
+        }
     }
 }

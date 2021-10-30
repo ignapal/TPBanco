@@ -10,7 +10,7 @@ CREATE TABLE TIPOS_CUENTA(
 )
 CREATE TABLE USUARIOS(
 	nombreUsuario varchar(40),
-	contrasenia varchar(50)
+	contrasenia varchar(50) not null
 
 	CONSTRAINT pk_usuarios PRIMARY KEY(nombreUsuario)
 )

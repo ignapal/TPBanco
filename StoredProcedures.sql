@@ -1,3 +1,4 @@
+--Obtener Usuario
 CREATE PROCEDURE SP_OBTENER_USUARIO 
 @nombreUsuario varchar(50),
 @contrasenia varchar(50)
@@ -9,11 +10,20 @@ BEGIN
 END
 delete from USUARIOS
 
+--Insertar Usuario
+CREATE PROCEDURE SP_INSERTAR_USUARIO 
+@nombreUsuario varchar(50),
+@contrasenia varchar(50)
+AS
+BEGIN
+	insert into USUARIOS
+	values(@nombreUsuario,@contrasenia)
+END
+
+exec SP_INSERTAR_USUARIO 'Palermo',NULL
+exec SP_OBTENER_USUARIO 'Palermo','1234'
+select * from USUARIOS
 delete from USUARIOS
-insert into USUARIOS values('pepessj',123213)
-exec SP_OBTENER_USUARIO 'pepessj',123213
-
-
 CREATE PROCEDURE SP_INSERTAR_CLIENTE
 @id int,
 @nombre varchar(50),

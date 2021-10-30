@@ -40,9 +40,8 @@ namespace BancoBackend.DAO
                 connection.Close();
                 return table;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                
                 return null;
             }
             finally {
@@ -52,26 +51,25 @@ namespace BancoBackend.DAO
             }
         }
 
-        public bool InsertarCliente(Cliente cliente) {
-            bool ok = true;
+        public bool InsertarEntidad(string nombreSp,Dictionary<string,object> parametros) {
 
-            SqlCommand command = new SqlCommand("SP_INSERTAR_CLIENTE", connection);
+            SqlCommand command = new SqlCommand(nombreSp, connection);
             command.CommandType = CommandType.StoredProcedure;
-
-            //Parametros
-            command.Parameters.AddWithValue("@nombre",cliente.Nombre);
-            command.Parameters.AddWithValue("@apellido",cliente.Apellido);
-            command.Parameters.AddWithValue("@dni",cliente.Dni);
-
             try
             {
                 connection.Open();
-                command.ExecuteNonQuery();
+                DataTable table = new DataTable();
+                foreach (KeyValuePair<string, object> parametro in parametros)
+                {
+                    command.Parameters.AddWithValue(parametro.Key, parametro.Value.ToString());
+                }
+                table.Load(command.ExecuteReader());
+                connection.Close();
+                return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                string mes = e.Message;
-                ok = false;
+                return false;
             }
             finally
             {
@@ -80,7 +78,7 @@ namespace BancoBackend.DAO
                     connection.Close();
                 }
             }
-            return ok;
+
         }
     }
 }

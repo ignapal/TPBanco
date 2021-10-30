@@ -10,5 +10,6 @@ namespace BancoBackend.Service.UsuarioServ
     public interface IUsuarioService
     {
         Usuario GetUsuario(Usuario usuario);
+        bool InsertarUsuario(Usuario usuario);
     }
 }

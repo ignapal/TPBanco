@@ -14,12 +14,37 @@ namespace BancoAPI.Controllers
     public class UsuarioController : ControllerBase
     {
 
-        [HttpPost]
-        public Usuario GetUsuario(Usuario usuario)
+        [HttpPost("/obtenerUsuario")]
+        public IActionResult GetUsuario(Usuario usuario)
         {
-           return ServiceFactoryProducer.GetFactory().GetUsuarioService().GetUsuario(usuario);
+            try
+            { if (ServiceFactoryProducer.GetFactory().GetUsuarioService().GetUsuario(usuario) == null)
+                {
+                    return Ok("No hay usuarios que coincidan");
+                }
+                else {
+                    return Ok(ServiceFactoryProducer.GetFactory().GetUsuarioService().GetUsuario(usuario));
+                }
+            }
+            catch (Exception)
+            {
+                return BadRequest("Ingrese un usuario Valido");
+            }
+
         }
 
+        [HttpPost("/insertarUsuario")]
+        public IActionResult InsertarUsuario(Usuario usuario) {
+
+            if (ServiceFactoryProducer.GetFactory().GetUsuarioService().InsertarUsuario(usuario))
+            {
+                return Ok(ServiceFactoryProducer.GetFactory().GetUsuarioService().InsertarUsuario(usuario));
+            }
+            else
+            {
+                return BadRequest("No se pudo insertar el usuario");
+            }
+        }
 
         // PUT api/<UsuarioController>/5
         [HttpPut("{id}")]
