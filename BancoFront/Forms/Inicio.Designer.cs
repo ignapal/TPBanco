@@ -29,37 +29,25 @@ namespace BancoFront
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formInicio));
-            this.btnInicio = new System.Windows.Forms.Button();
-            this.loader = new System.Windows.Forms.PictureBox();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.loader)).BeginInit();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnInicio
+            // btnIniciar
             // 
-            this.btnInicio.BackColor = System.Drawing.Color.White;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInicio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInicio.Location = new System.Drawing.Point(347, 280);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(133, 50);
-            this.btnInicio.TabIndex = 0;
-            this.btnInicio.UseVisualStyleBackColor = false;
-            this.btnInicio.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // loader
-            // 
-            this.loader.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.loader.Image = global::BancoFront.Properties.Resources.loader1;
-            this.loader.Location = new System.Drawing.Point(347, 244);
-            this.loader.Name = "loader";
-            this.loader.Size = new System.Drawing.Size(133, 121);
-            this.loader.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.loader.TabIndex = 1;
-            this.loader.TabStop = false;
+            this.btnIniciar.BackColor = System.Drawing.Color.White;
+            this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnIniciar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnIniciar.Location = new System.Drawing.Point(146, 334);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(133, 50);
+            this.btnIniciar.TabIndex = 0;
+            this.btnIniciar.Text = "Iniciar Sesion";
+            this.btnIniciar.UseVisualStyleBackColor = false;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // label1
             // 
@@ -84,23 +72,35 @@ namespace BancoFront
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.White;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRegistrar.Location = new System.Drawing.Point(489, 334);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(133, 50);
+            this.btnRegistrar.TabIndex = 4;
+            this.btnRegistrar.Text = "Registrarse";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
             // formInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Red;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.loader);
-            this.Controls.Add(this.btnInicio);
+            this.Controls.Add(this.btnIniciar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "formInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hastayer Fío";
             this.Load += new System.EventHandler(this.formInicio_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.loader)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -109,10 +109,10 @@ namespace BancoFront
 
         #endregion
 
-        private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.PictureBox loader;
+        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }
 

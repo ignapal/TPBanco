@@ -25,7 +25,6 @@ C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\bin\Debug\net5.0\runtimes\unix\
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\bin\Debug\net5.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\bin\Debug\net5.0\BancoBackend.dll
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\bin\Debug\net5.0\BancoBackend.pdb
-C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\staticwebassets\BancoAPI.StaticWebAssets.Manifest.cache
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\staticwebassets\BancoAPI.StaticWebAssets.xml
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\scopedcss\bundle\BancoAPI.styles.css
@@ -34,6 +33,5 @@ C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.dll
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\ref\BancoAPI.dll
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.pdb
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.genruntimeconfig.cache
-C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoFront.formInicio.resources
-C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.BancoFront.Properties.Resources.resources
-C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.csproj.GenerateResource.cache
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.csproj.CopyComplete

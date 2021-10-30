@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BancoBackend.Service
+namespace BancoBackend.Service.UsuarioServ
 {
-     public interface IService
+    public interface IUsuarioService
     {
-        Cliente GetCliente();
+        Usuario GetUsuario(Usuario usuario);
     }
 }

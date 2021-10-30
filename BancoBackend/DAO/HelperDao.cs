@@ -24,25 +24,25 @@ namespace BancoBackend.DAO
             return instancia;
         }
 
-        public Cliente GetCliente() {
-            SqlCommand command = new SqlCommand("SP_OBTENER_CLIENTE",connection);
+        public DataTable GetTable(string nombreSp,Dictionary<string,object> parametros) {
 
+            SqlCommand command = new SqlCommand(nombreSp,connection);
+            command.CommandType = CommandType.StoredProcedure;
             try
             {
                 connection.Open();
                 DataTable table = new DataTable();
+                foreach (KeyValuePair<string, object> parametro in parametros)
+                {
+                    command.Parameters.AddWithValue(parametro.Key,parametro.Value.ToString());
+                }
                 table.Load(command.ExecuteReader());
                 connection.Close();
-
-                Cliente cliente = new Cliente();
-                cliente.Nombre = (string)table.Rows[0]["nombre"];
-                cliente.Apellido = (string)table.Rows[0]["apellido"];
-                cliente.Dni = Convert.ToInt32(table.Rows[0]["nroDoc"]);
-
-                return cliente;
+                return table;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                
                 return null;
             }
             finally {
@@ -50,6 +50,37 @@ namespace BancoBackend.DAO
                     connection.Close();
                 }
             }
+        }
+
+        public bool InsertarCliente(Cliente cliente) {
+            bool ok = true;
+
+            SqlCommand command = new SqlCommand("SP_INSERTAR_CLIENTE", connection);
+            command.CommandType = CommandType.StoredProcedure;
+
+            //Parametros
+            command.Parameters.AddWithValue("@nombre",cliente.Nombre);
+            command.Parameters.AddWithValue("@apellido",cliente.Apellido);
+            command.Parameters.AddWithValue("@dni",cliente.Dni);
+
+            try
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+                string mes = e.Message;
+                ok = false;
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+            return ok;
         }
     }
 }

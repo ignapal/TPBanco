@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace BancoBackend.Service
 {
-    class ServiceFactory
+    public class ServiceFactoryProducer
     {
+        public static AbstractServiceFactory GetFactory(){
+            return new ServiceFactoryImpl();
+        }
     }
 }

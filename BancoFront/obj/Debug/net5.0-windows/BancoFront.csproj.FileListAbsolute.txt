@@ -26,3 +26,5 @@ C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\B
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.genruntimeconfig.cache
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Properties.Resources.resources
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Registro.resources
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.InicioSesion.resources

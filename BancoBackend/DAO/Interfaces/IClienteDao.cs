@@ -1,6 +1,7 @@
 ﻿using BancoBackend.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,6 @@ namespace BancoBackend.DAO
 {
     interface IClienteDao
     {
-        Cliente GetCliente();
+        bool InsertarCliente(Cliente cliente);
     }
 }
