@@ -48,7 +48,7 @@ namespace BancoFront.Forms
             this.label2.Location = new System.Drawing.Point(243, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(314, 60);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 1;
             this.label2.Text = "INICIAR SESIÓN";
             // 
             // txtContrasenia
@@ -56,7 +56,7 @@ namespace BancoFront.Forms
             this.txtContrasenia.Location = new System.Drawing.Point(260, 295);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(280, 23);
-            this.txtContrasenia.TabIndex = 8;
+            this.txtContrasenia.TabIndex = 5;
             this.txtContrasenia.UseSystemPasswordChar = true;
             // 
             // txtUsuario
@@ -64,7 +64,7 @@ namespace BancoFront.Forms
             this.txtUsuario.Location = new System.Drawing.Point(260, 180);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(280, 23);
-            this.txtUsuario.TabIndex = 7;
+            this.txtUsuario.TabIndex = 3;
             // 
             // lblContrasenia
             // 
@@ -74,7 +74,7 @@ namespace BancoFront.Forms
             this.lblContrasenia.Location = new System.Drawing.Point(348, 260);
             this.lblContrasenia.Name = "lblContrasenia";
             this.lblContrasenia.Size = new System.Drawing.Size(107, 22);
-            this.lblContrasenia.TabIndex = 10;
+            this.lblContrasenia.TabIndex = 4;
             this.lblContrasenia.Text = "Contraseña";
             // 
             // label1
@@ -85,7 +85,7 @@ namespace BancoFront.Forms
             this.label1.Location = new System.Drawing.Point(360, 146);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 22);
-            this.label1.TabIndex = 9;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             // 
             // btnIniciar
@@ -96,7 +96,7 @@ namespace BancoFront.Forms
             this.btnIniciar.Location = new System.Drawing.Point(260, 372);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(121, 45);
-            this.btnIniciar.TabIndex = 11;
+            this.btnIniciar.TabIndex = 7;
             this.btnIniciar.Text = "Iniciar Sesion";
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -109,7 +109,7 @@ namespace BancoFront.Forms
             this.btnVerPass.Location = new System.Drawing.Point(558, 279);
             this.btnVerPass.Name = "btnVerPass";
             this.btnVerPass.Size = new System.Drawing.Size(47, 52);
-            this.btnVerPass.TabIndex = 12;
+            this.btnVerPass.TabIndex = 6;
             this.btnVerPass.Text = "👁";
             this.btnVerPass.UseVisualStyleBackColor = false;
             this.btnVerPass.Click += new System.EventHandler(this.btnVerPass_Click);
@@ -122,7 +122,7 @@ namespace BancoFront.Forms
             this.btnVolver.Location = new System.Drawing.Point(419, 372);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(121, 45);
-            this.btnVolver.TabIndex = 18;
+            this.btnVolver.TabIndex = 8;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);

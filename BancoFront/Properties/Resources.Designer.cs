@@ -93,6 +93,16 @@ namespace BancoFront.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap santanderR {
+            get {
+                object obj = ResourceManager.GetObject("santanderR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap showingPass {
             get {
                 object obj = ResourceManager.GetObject("showingPass", resourceCulture);

@@ -44,7 +44,7 @@ namespace BancoFront
             this.btnIniciar.Location = new System.Drawing.Point(146, 334);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(133, 50);
-            this.btnIniciar.TabIndex = 0;
+            this.btnIniciar.TabIndex = 1;
             this.btnIniciar.Text = "Iniciar Sesion";
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
@@ -80,7 +80,7 @@ namespace BancoFront
             this.btnRegistrar.Location = new System.Drawing.Point(489, 334);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(133, 50);
-            this.btnRegistrar.TabIndex = 4;
+            this.btnRegistrar.TabIndex = 2;
             this.btnRegistrar.Text = "Registrarse";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);

@@ -28,3 +28,7 @@ C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\bin\Debug\net5.0-windows\N
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Properties.Resources.resources
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Registro.resources
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.InicioSesion.resources
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.ProgramaBanco.resources
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.ProgramaPrincipal.AgregarCliente.resources
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.ProgramaPrincipal.AgregarCuentas.resources
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.ProgramaPrincipal.NuevoMovimiento.resources

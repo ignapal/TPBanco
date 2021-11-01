@@ -51,7 +51,7 @@ namespace BancoFront
             this.label2.Location = new System.Drawing.Point(299, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 60);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 1;
             this.label2.Text = "REGISTRO";
             // 
             // btnRegistrar
@@ -62,7 +62,7 @@ namespace BancoFront
             this.btnRegistrar.Location = new System.Drawing.Point(260, 393);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(121, 45);
-            this.btnRegistrar.TabIndex = 16;
+            this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "Registrarse";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
@@ -72,7 +72,7 @@ namespace BancoFront
             this.txtContrasenia.Location = new System.Drawing.Point(260, 216);
             this.txtContrasenia.Name = "txtContrasenia";
             this.txtContrasenia.Size = new System.Drawing.Size(280, 23);
-            this.txtContrasenia.TabIndex = 13;
+            this.txtContrasenia.TabIndex = 5;
             this.txtContrasenia.UseSystemPasswordChar = true;
             // 
             // txtUsuario
@@ -80,7 +80,7 @@ namespace BancoFront
             this.txtUsuario.Location = new System.Drawing.Point(260, 126);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(280, 23);
-            this.txtUsuario.TabIndex = 12;
+            this.txtUsuario.TabIndex = 3;
             // 
             // lblContrasenia
             // 
@@ -90,7 +90,7 @@ namespace BancoFront
             this.lblContrasenia.Location = new System.Drawing.Point(348, 181);
             this.lblContrasenia.Name = "lblContrasenia";
             this.lblContrasenia.Size = new System.Drawing.Size(107, 22);
-            this.lblContrasenia.TabIndex = 15;
+            this.lblContrasenia.TabIndex = 4;
             this.lblContrasenia.Text = "Contraseña";
             // 
             // label1
@@ -101,7 +101,7 @@ namespace BancoFront
             this.label1.Location = new System.Drawing.Point(360, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 22);
-            this.label1.TabIndex = 14;
+            this.label1.TabIndex = 2;
             this.label1.Text = "Usuario";
             // 
             // btnVolver
@@ -112,7 +112,7 @@ namespace BancoFront
             this.btnVolver.Location = new System.Drawing.Point(419, 393);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(121, 45);
-            this.btnVolver.TabIndex = 17;
+            this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
@@ -122,7 +122,7 @@ namespace BancoFront
             this.txtPassConfirmar.Location = new System.Drawing.Point(260, 322);
             this.txtPassConfirmar.Name = "txtPassConfirmar";
             this.txtPassConfirmar.Size = new System.Drawing.Size(280, 23);
-            this.txtPassConfirmar.TabIndex = 18;
+            this.txtPassConfirmar.TabIndex = 8;
             this.txtPassConfirmar.UseSystemPasswordChar = true;
             // 
             // label3
@@ -133,7 +133,7 @@ namespace BancoFront
             this.label3.Location = new System.Drawing.Point(299, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 22);
-            this.label3.TabIndex = 19;
+            this.label3.TabIndex = 7;
             this.label3.Text = "Confirmar Contraseña";
             // 
             // btnVerPass
@@ -144,7 +144,7 @@ namespace BancoFront
             this.btnVerPass.Location = new System.Drawing.Point(557, 200);
             this.btnVerPass.Name = "btnVerPass";
             this.btnVerPass.Size = new System.Drawing.Size(47, 52);
-            this.btnVerPass.TabIndex = 20;
+            this.btnVerPass.TabIndex = 6;
             this.btnVerPass.Text = "👁";
             this.btnVerPass.UseVisualStyleBackColor = false;
             this.btnVerPass.Click += new System.EventHandler(this.btnVerPass_Click);
@@ -157,7 +157,7 @@ namespace BancoFront
             this.btnVerConfirmar.Location = new System.Drawing.Point(557, 306);
             this.btnVerConfirmar.Name = "btnVerConfirmar";
             this.btnVerConfirmar.Size = new System.Drawing.Size(47, 52);
-            this.btnVerConfirmar.TabIndex = 21;
+            this.btnVerConfirmar.TabIndex = 9;
             this.btnVerConfirmar.Text = "👁";
             this.btnVerConfirmar.UseVisualStyleBackColor = false;
             this.btnVerConfirmar.Click += new System.EventHandler(this.btnVerConfirmar_Click);

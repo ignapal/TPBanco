@@ -46,7 +46,7 @@ namespace BancoFront.Forms
             try
             {
                 Usuario usuario1 = JsonConvert.DeserializeObject<Usuario>(body);
-                MessageBox.Show("Ponele que soy el programa", "dou");
+                new ProgramaBanco().ShowDialog();
             }
             catch (Exception)
             {
