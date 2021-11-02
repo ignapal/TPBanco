@@ -1,15 +1,15 @@
 ﻿using BancoBackend.Entidades;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BancoBackend.DAO
+namespace BancoBackend.Service.CuentaServ
 {
-    interface IClienteDao
+    public interface ICuentaService
     {
-        int GetUltimoId();
+        List<TipoCuenta> GetCuentas();
+        bool ValidarCbu(decimal cbu);
     }
 }

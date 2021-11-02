@@ -1,4 +1,6 @@
-﻿using BancoBackend.Service.UsuarioServ;
+﻿using BancoBackend.Service.ClienteServ;
+using BancoBackend.Service.CuentaServ;
+using BancoBackend.Service.UsuarioServ;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +11,20 @@ namespace BancoBackend.Service
 {
     public class ServiceFactoryImpl : AbstractServiceFactory
     {
+        public override IClienteService GetClienteService()
+        {
+            return new ClienteService();
+        }
+
+        public override ICuentaService GetCuentaService()
+        {
+            return new CuentaService();
+        }
+
         public override IUsuarioService GetUsuarioService()
         {
             return new UsuarioService();
         }
+        
     }
 }

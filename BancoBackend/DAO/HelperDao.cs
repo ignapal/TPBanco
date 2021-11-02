@@ -24,6 +24,33 @@ namespace BancoBackend.DAO
             return instancia;
         }
 
+        public int GetUltimoId(string nombreSP,string nombreParam) {
+            SqlCommand command = new SqlCommand(nombreSP, connection);
+            command.CommandType = CommandType.StoredProcedure;
+            SqlParameter parameter = new SqlParameter();
+            parameter.SqlDbType = SqlDbType.Int;
+            parameter.ParameterName = nombreParam;
+            parameter.Direction = ParameterDirection.Output;
+
+            try
+            {
+                connection.Open();
+                command.Parameters.Add(parameter);
+                command.ExecuteNonQuery();
+                return Convert.ToInt32(parameter.Value);
+            }
+            catch (Exception)
+            {
+
+                return 0;
+            }
+            finally {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
         public DataTable GetTable(string nombreSp,Dictionary<string,object> parametros) {
 
             SqlCommand command = new SqlCommand(nombreSp,connection);
@@ -32,9 +59,12 @@ namespace BancoBackend.DAO
             {
                 connection.Open();
                 DataTable table = new DataTable();
-                foreach (KeyValuePair<string, object> parametro in parametros)
+                if (parametros!= null || parametros.Count > 0)
                 {
-                    command.Parameters.AddWithValue(parametro.Key,parametro.Value.ToString());
+                    foreach (KeyValuePair<string, object> parametro in parametros)
+                    {
+                        command.Parameters.AddWithValue(parametro.Key, parametro.Value.ToString());
+                    }
                 }
                 table.Load(command.ExecuteReader());
                 connection.Close();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BancoBackend.Entidades
 {
-    class TipoCuenta
+    public class TipoCuenta
     {
         public int IdTipoCuenta { get; set; }
         public string NombreTipoCuenta { get; set; }

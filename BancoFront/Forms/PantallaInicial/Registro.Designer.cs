@@ -65,7 +65,7 @@ namespace BancoFront
             this.btnRegistrar.TabIndex = 10;
             this.btnRegistrar.Text = "Registrarse";
             this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtContrasenia
             // 
@@ -185,7 +185,6 @@ namespace BancoFront
             this.Name = "Registro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro";
-            this.Load += new System.EventHandler(this.Registro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -32,7 +32,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarCliente));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCliente = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
@@ -43,7 +43,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.txtCBU = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAgregarCuenta = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCuentas = new System.Windows.Forms.DataGridView();
             this.idCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipoCuenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbu = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,7 +53,8 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.btnLimpiar1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.lblNroCliente = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -74,16 +75,16 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.lblNombre.TabIndex = 6;
             this.lblNombre.Text = "Nombre";
             // 
-            // label2
+            // lblCliente
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Firebrick;
-            this.label2.Location = new System.Drawing.Point(261, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 45);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Agregar Cliente";
+            this.lblCliente.AutoSize = true;
+            this.lblCliente.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblCliente.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblCliente.Location = new System.Drawing.Point(261, 10);
+            this.lblCliente.Name = "lblCliente";
+            this.lblCliente.Size = new System.Drawing.Size(201, 45);
+            this.lblCliente.TabIndex = 12;
+            this.lblCliente.Text = "Cliente Nro: ";
             // 
             // txtApellido
             // 
@@ -180,24 +181,27 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.btnAgregarCuenta.TabIndex = 7;
             this.btnAgregarCuenta.Text = "Agregar Cuenta";
             this.btnAgregarCuenta.UseVisualStyleBackColor = true;
+            this.btnAgregarCuenta.Click += new System.EventHandler(this.btnAgregarCuenta_Click);
             // 
-            // dataGridView1
+            // dgvCuentas
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCuentas.AllowUserToAddRows = false;
+            this.dgvCuentas.AllowUserToDeleteRows = false;
+            this.dgvCuentas.AllowUserToResizeColumns = false;
+            this.dgvCuentas.AllowUserToResizeRows = false;
+            this.dgvCuentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCuentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCliente,
             this.tipoCuenta,
             this.cbu,
             this.btnEliminar});
-            this.dataGridView1.Location = new System.Drawing.Point(78, 350);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(380, 272);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvCuentas.Location = new System.Drawing.Point(78, 350);
+            this.dgvCuentas.Name = "dgvCuentas";
+            this.dgvCuentas.ReadOnly = true;
+            this.dgvCuentas.RowTemplate.Height = 25;
+            this.dgvCuentas.Size = new System.Drawing.Size(417, 272);
+            this.dgvCuentas.TabIndex = 9;
             // 
             // idCliente
             // 
@@ -261,6 +265,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.btnLimpiar1.TabIndex = 4;
             this.btnLimpiar1.Text = "Limpiar";
             this.btnLimpiar1.UseVisualStyleBackColor = false;
+            this.btnLimpiar1.Click += new System.EventHandler(this.btnLimpiar1_Click);
             // 
             // button1
             // 
@@ -273,6 +278,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.button1.TabIndex = 8;
             this.button1.Text = "Limpiar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnVolver
             // 
@@ -287,18 +293,30 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // lblNroCliente
+            // 
+            this.lblNroCliente.AutoSize = true;
+            this.lblNroCliente.Font = new System.Drawing.Font("Impact", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNroCliente.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblNroCliente.Location = new System.Drawing.Point(456, 10);
+            this.lblNroCliente.Name = "lblNroCliente";
+            this.lblNroCliente.Size = new System.Drawing.Size(39, 45);
+            this.lblNroCliente.TabIndex = 23;
+            this.lblNroCliente.Text = "?";
+            // 
             // AgregarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 647);
+            this.Controls.Add(this.lblNroCliente);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnLimpiar1);
             this.Controls.Add(this.btnAgregarCliente);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvCuentas);
             this.Controls.Add(this.btnAgregarCuenta);
             this.Controls.Add(this.txtCBU);
             this.Controls.Add(this.label6);
@@ -309,7 +327,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCliente);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -318,7 +336,8 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.Name = "AgregarCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Cliente";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.AgregarCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCuentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -327,7 +346,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
         #endregion
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDni;
@@ -338,7 +357,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
         private System.Windows.Forms.TextBox txtCBU;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAgregarCuenta;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCuentas;
         private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipoCuenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn cbu;
@@ -348,5 +367,6 @@ namespace BancoFront.Forms.ProgramaPrincipal
         private System.Windows.Forms.Button btnLimpiar1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Label lblNroCliente;
     }
 }

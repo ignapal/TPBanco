@@ -1,14 +1,12 @@
-﻿using BancoBackend.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BancoBackend.DAO
+namespace BancoBackend.Service.ClienteServ
 {
-    interface IClienteDao
+    public interface IClienteService
     {
         int GetUltimoId();
     }
