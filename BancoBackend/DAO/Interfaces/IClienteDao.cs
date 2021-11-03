@@ -11,5 +11,7 @@ namespace BancoBackend.DAO
     interface IClienteDao
     {
         int GetUltimoId();
+
+        bool InsertarCliente(Cliente cliente);
     }
 }

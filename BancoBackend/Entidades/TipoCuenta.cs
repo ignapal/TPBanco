@@ -10,5 +10,19 @@ namespace BancoBackend.Entidades
     {
         public int IdTipoCuenta { get; set; }
         public string NombreTipoCuenta { get; set; }
+
+        public TipoCuenta() {
+            IdTipoCuenta = 0;
+            NombreTipoCuenta = "";
+        }
+        public TipoCuenta(int idTipoCuenta, string nombreTipoCuenta)
+        {
+            IdTipoCuenta = idTipoCuenta;
+            NombreTipoCuenta = nombreTipoCuenta;
+        }
+        public override string ToString()
+        {
+            return NombreTipoCuenta;
+        }
     }
 }

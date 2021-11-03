@@ -75,14 +75,12 @@ namespace BancoFront
                 return;
             }
             //Fin validaciones
-            Usuario usuario = new Usuario();
-            usuario.Nombre = txtUsuario.Text;
-            usuario.Contrasenia = txtContrasenia.Text;
+            Usuario usuario = new(txtUsuario.Text, txtContrasenia.Text);
 
             //Registrar Usuario
             string url = "https://localhost:5001/insertarUsuario";
             var usuarioJson = JsonConvert.SerializeObject(usuario);
-            StringContent usuarioBody = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
+            StringContent usuarioBody = new(usuarioJson, Encoding.UTF8, "application/json");
 
             var response = await HttpCliSingleton.GetClient().PostAsync(url, usuarioBody);
             var body = await response.Content.ReadAsStringAsync();

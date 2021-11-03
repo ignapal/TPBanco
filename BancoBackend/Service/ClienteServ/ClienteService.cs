@@ -1,5 +1,7 @@
 ﻿using BancoBackend.DAO;
 using BancoBackend.DAO.Implementaciones;
+using BancoBackend.Entidades;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,13 @@ namespace BancoBackend.Service.ClienteServ
         {
             clienteDao = new ClienteDaoImpl();
             return clienteDao.GetUltimoId();
+        }
+
+        public bool InsertarCliente(Cliente cliente)
+        {
+            clienteDao = new ClienteDaoImpl();
+            
+            return clienteDao.InsertarCliente(cliente);
         }
     }
 }

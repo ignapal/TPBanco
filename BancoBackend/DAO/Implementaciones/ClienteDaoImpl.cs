@@ -14,5 +14,15 @@ namespace BancoBackend.DAO.Implementaciones
         {
             return HelperDao.GetInstancia().GetUltimoId("OBTENER_PROXIMO_ID", "@proximoID");
         }
+
+        public bool InsertarCliente(Cliente cliente)
+        {
+            
+
+            return HelperDao.GetInstancia().InsertarClienteConCuentas("SP_INSERTAR_CLIENTE", "SP_INSERTAR_CUENTA", cliente);
+            
+            
+
+        }
     }
 }

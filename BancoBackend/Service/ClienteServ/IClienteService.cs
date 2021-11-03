@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoBackend.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,5 +10,6 @@ namespace BancoBackend.Service.ClienteServ
     public interface IClienteService
     {
         int GetUltimoId();
+        bool InsertarCliente(Cliente cliente);
     }
 }

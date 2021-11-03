@@ -156,9 +156,9 @@ namespace BancoFront.Forms.ProgramaPrincipal
             // 
             // txtCBU
             // 
-            this.txtCBU.Location = new System.Drawing.Point(323, 261);
+            this.txtCBU.Location = new System.Drawing.Point(313, 261);
             this.txtCBU.Name = "txtCBU";
-            this.txtCBU.Size = new System.Drawing.Size(135, 23);
+            this.txtCBU.Size = new System.Drawing.Size(152, 23);
             this.txtCBU.TabIndex = 6;
             // 
             // label6
@@ -189,47 +189,59 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.dgvCuentas.AllowUserToDeleteRows = false;
             this.dgvCuentas.AllowUserToResizeColumns = false;
             this.dgvCuentas.AllowUserToResizeRows = false;
-            this.dgvCuentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
+            this.dgvCuentas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCuentas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvCuentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCuentas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idCliente,
             this.tipoCuenta,
             this.cbu,
             this.btnEliminar});
-            this.dgvCuentas.Location = new System.Drawing.Point(78, 350);
+            this.dgvCuentas.Location = new System.Drawing.Point(18, 350);
             this.dgvCuentas.Name = "dgvCuentas";
             this.dgvCuentas.ReadOnly = true;
+            this.dgvCuentas.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvCuentas.RowTemplate.Height = 25;
-            this.dgvCuentas.Size = new System.Drawing.Size(417, 272);
+            this.dgvCuentas.Size = new System.Drawing.Size(522, 272);
             this.dgvCuentas.TabIndex = 9;
+            this.dgvCuentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuentas_CellContentClick);
             // 
             // idCliente
             // 
             this.idCliente.HeaderText = "idCliente";
             this.idCliente.Name = "idCliente";
             this.idCliente.ReadOnly = true;
+            this.idCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.idCliente.Visible = false;
+            this.idCliente.Width = 79;
             // 
             // tipoCuenta
             // 
+            this.tipoCuenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tipoCuenta.HeaderText = "Tipo de Cuenta";
             this.tipoCuenta.Name = "tipoCuenta";
             this.tipoCuenta.ReadOnly = true;
+            this.tipoCuenta.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // cbu
             // 
+            this.cbu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.cbu.HeaderText = "CBU";
             this.cbu.Name = "cbu";
             this.cbu.ReadOnly = true;
+            this.cbu.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // btnEliminar
             // 
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.btnEliminar.HeaderText = "Eliminar";
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.ReadOnly = true;
-            this.btnEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.btnEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.ToolTipText = "Eliminar";
+            this.btnEliminar.UseColumnTextForButtonValue = true;
             // 
             // label7
             // 
@@ -253,6 +265,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
             this.btnAgregarCliente.TabIndex = 10;
             this.btnAgregarCliente.Text = "Agregar Cliente";
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
             // btnLimpiar1
             // 
@@ -358,15 +371,15 @@ namespace BancoFront.Forms.ProgramaPrincipal
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAgregarCuenta;
         private System.Windows.Forms.DataGridView dgvCuentas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipoCuenta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cbu;
-        private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Button btnLimpiar1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Label lblNroCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoCuenta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cbu;
+        private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
     }
 }

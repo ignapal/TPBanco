@@ -59,15 +59,27 @@ AS
 		where cbu = @cbu
 	END
 ----------------------------------------
+--Insertar Cliente
 CREATE PROCEDURE SP_INSERTAR_CLIENTE
-@id int,
+@idCliente int,
 @nombre varchar(50),
 @apellido varchar(50),
 @dni int
 AS
 	BEGIN
 		INSERT INTO CLIENTES
-		VALUES(@id,@nombre,@apellido,@dni)
+		VALUES(@idCliente,@nombre,@apellido,@dni)
 	END
+----------------------------------------
+--Insertar Cuenta
+CREATE PROCEDURE SP_INSERTAR_CUENTA
+@idCliente int,
+@cbu decimal(22,0),
+@saldo decimal(19,4),
+@idTipoCuenta int
 
-exec INSERTAR_CLIENTE 'Martin','Palermo',43272176
+AS
+	BEGIN
+		INSERT INTO CUENTAS
+		VALUES(@idCliente,@cbu,@saldo,@idTipoCuenta,null)
+	END

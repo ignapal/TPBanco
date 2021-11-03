@@ -16,7 +16,7 @@ namespace BancoBackend.DAO.Implementaciones
 
         public DataTable ValidarCbu(decimal cbu)
         {   
-            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            Dictionary<string, object> parametros = new();
             parametros.Add("@cbu",cbu);
             return HelperDao.GetInstancia().GetTable("VALIDAR_CBU_REPETIDA", parametros);
         }

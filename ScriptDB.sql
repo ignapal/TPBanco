@@ -54,6 +54,10 @@ ADD CONSTRAINT fk_cuentas_ultimoMovimiento FOREIGN KEY(ultimoMovimiento) REFEREN
 
 insert into TIPOS_CUENTA values(1,'Caja de ahorro'),(2,'Cuenta Corriente');
 insert into CLIENTES values(1,'Martin', 'Palermo',43272181);
-insert into CLIENTES values(2,'asd', 'asad',12313);
 insert into CUENTAS values(1,1234567891234567891234,20000,1,null),(1,0987654321098765432109,9500000,2,null);
 insert into MOVIMIENTOS values(1,1234567891234567891234,0987654321098765432200,30000,'2021-10-23 12:30:00'),(2,1234567891234567891234,0987654321025965432200,20000,'2021-10-23 18:20:00');
+
+select *  from USUARIOS
+select c.*,t.tipoCuenta  from CUENTAS c
+join TIPOS_CUENTA t on t.idTipoCuenta = c.idTipoCuenta
+select *  from CLIENTES

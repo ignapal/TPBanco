@@ -1,4 +1,5 @@
-﻿using BancoBackend.Service;
+﻿using BancoBackend.Entidades;
+using BancoBackend.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -22,6 +23,21 @@ namespace BancoAPI.Controllers
             {
                 return StatusCode(500);
             }
+
+        }
+
+        [HttpPost("/insertarCliente")]
+        public IActionResult InsertarCliente(Cliente cliente) {
+            bool result = ServiceFactoryProducer.GetFactory().GetClienteService().InsertarCliente(cliente);
+            if (result)
+            {
+                return Ok(result);
+            }
+            else { 
+                return StatusCode(500,"Fallo al insertar cliente con cuentas");
+            }
+            
+
             
         }
     }

@@ -12,7 +12,7 @@ namespace BancoBackend.DAO
     class HelperDao
     {
         private static HelperDao instancia;
-        private SqlConnection connection;
+        private readonly SqlConnection connection;
 
         private HelperDao() {
             connection = new SqlConnection(@"Data Source=NBAR15229\SQLEXPRESS;Initial Catalog=BANCO;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
@@ -25,9 +25,9 @@ namespace BancoBackend.DAO
         }
 
         public int GetUltimoId(string nombreSP,string nombreParam) {
-            SqlCommand command = new SqlCommand(nombreSP, connection);
+            SqlCommand command = new(nombreSP, connection);
             command.CommandType = CommandType.StoredProcedure;
-            SqlParameter parameter = new SqlParameter();
+            SqlParameter parameter = new();
             parameter.SqlDbType = SqlDbType.Int;
             parameter.ParameterName = nombreParam;
             parameter.Direction = ParameterDirection.Output;
@@ -53,12 +53,12 @@ namespace BancoBackend.DAO
         }
         public DataTable GetTable(string nombreSp,Dictionary<string,object> parametros) {
 
-            SqlCommand command = new SqlCommand(nombreSp,connection);
+            SqlCommand command = new(nombreSp,connection);
             command.CommandType = CommandType.StoredProcedure;
             try
             {
                 connection.Open();
-                DataTable table = new DataTable();
+                DataTable table = new();
                 if (parametros!= null || parametros.Count > 0)
                 {
                     foreach (KeyValuePair<string, object> parametro in parametros)
@@ -80,15 +80,58 @@ namespace BancoBackend.DAO
                 }
             }
         }
+        public bool InsertarClienteConCuentas(string nombreSpMaestro, string nombreSpDetalle,Cliente cliente) {
+            connection.Open();
+            SqlTransaction transaction = connection.BeginTransaction();
+            SqlCommand command = new(nombreSpMaestro,connection,transaction);
+            command.CommandType = CommandType.StoredProcedure;
+            command.Parameters.AddWithValue("@idCliente", cliente.IdCliente);
+            command.Parameters.AddWithValue("@nombre", cliente.Nombre);
+            command.Parameters.AddWithValue("@apellido", cliente.Apellido);
+            command.Parameters.AddWithValue("@dni", cliente.Dni);
+
+            try
+            {
+                
+                command.ExecuteNonQuery();
+                foreach (Cuenta cuenta in cliente.Cuentas)
+                {
+                    SqlCommand commandDetalle = new(nombreSpDetalle,connection,transaction);
+                    commandDetalle.CommandType = CommandType.StoredProcedure;
+                    commandDetalle.Parameters.AddWithValue("@idCliente",cliente.IdCliente);
+                    commandDetalle.Parameters.AddWithValue("@cbu", cuenta.Cbu);
+                    commandDetalle.Parameters.AddWithValue("@saldo", cuenta.Saldo);
+                    commandDetalle.Parameters.AddWithValue("@idTipoCuenta", cuenta.TipoCuenta);
+
+                    commandDetalle.ExecuteNonQuery();
+                }
+
+                transaction.Commit();
+                connection.Close();
+                return true;
+            }
+            catch (Exception)
+            {
+                transaction.Rollback();
+                return false;
+
+            }
+            finally {
+                if (connection.State == ConnectionState.Open)
+                {
+                    connection.Close();
+                }
+            }
+        }
 
         public bool InsertarEntidad(string nombreSp,Dictionary<string,object> parametros) {
 
-            SqlCommand command = new SqlCommand(nombreSp, connection);
+            SqlCommand command = new(nombreSp, connection);
             command.CommandType = CommandType.StoredProcedure;
             try
             {
                 connection.Open();
-                DataTable table = new DataTable();
+                DataTable table = new();
                 foreach (KeyValuePair<string, object> parametro in parametros)
                 {
                     command.Parameters.AddWithValue(parametro.Key, parametro.Value.ToString());

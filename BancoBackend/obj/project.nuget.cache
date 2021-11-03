@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PloXosyXiB54pUMzs5UBvMpgnp3dKJOMOcptCpFucv7TmJ64/z6LyFM5T0J1J37H/kzoNzLGUsn0hOzq9O8BzA==",
+  "dgSpecHash": "cQx/CMtJHlKnF4A0gL5R3YxFf1IvV+1u6P6ylHhz6hAfMH7RAeRneUCanXU/VFlBho2+xgn5IxMwcdlQHyzClw==",
   "success": true,
   "projectFilePath": "C:\\Users\\lnapal\\Desktop\\UTN\\TpProgramacion\\BancoBackend\\BancoBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lnapal\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\lnapal\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
+    "C:\\Users\\lnapal\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\lnapal\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
     "C:\\Users\\lnapal\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\lnapal\\.nuget\\packages\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",

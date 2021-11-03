@@ -32,13 +32,11 @@ namespace BancoFront.Forms
                 return;
             }
 
-            Usuario usuario = new Usuario();
-            usuario.Nombre = txtUsuario.Text;
-            usuario.Contrasenia = txtContrasenia.Text;
+            Usuario usuario = new(txtUsuario.Text, txtContrasenia.Text);
 
             string url = "https://localhost:5001/obtenerUsuario";
             string usuarioJson = JsonConvert.SerializeObject(usuario);
-            StringContent usuarioBody = new StringContent(usuarioJson, Encoding.UTF8, "application/json");
+            StringContent usuarioBody = new(usuarioJson, Encoding.UTF8, "application/json");
 
             var response = await HttpCliSingleton.GetClient().PostAsync(url, usuarioBody);
             var body = await response.Content.ReadAsStringAsync();
@@ -46,6 +44,7 @@ namespace BancoFront.Forms
             try
             {
                 Usuario usuario1 = JsonConvert.DeserializeObject<Usuario>(body);
+                Limpiar();
                 new ProgramaBanco().ShowDialog();
             }
             catch (Exception)
@@ -55,9 +54,10 @@ namespace BancoFront.Forms
             }
         }
 
-        private void InicioSesion_Load(object sender, EventArgs e)
+        private void Limpiar()
         {
-
+            txtContrasenia.Text = "";
+            txtUsuario.Text = "";
         }
 
         private void btnVerPass_Click(object sender, EventArgs e)

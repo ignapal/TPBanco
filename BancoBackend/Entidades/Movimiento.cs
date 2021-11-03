@@ -12,6 +12,24 @@ namespace BancoBackend.Entidades
         public decimal CbuOrigen { get; set; }
         public decimal CbuDestino { get; set; }
         public decimal Monto { get; set; }
-        public DateTime fecha { get; set; }
+        public DateTime Fecha { get; set; }
+
+        public Movimiento(int idMovimiento, decimal cbuOrigen, decimal cbuDestino, decimal monto, DateTime fecha)
+        {
+            IdMovimiento = idMovimiento;
+            CbuOrigen = cbuOrigen;
+            CbuDestino = cbuDestino;
+            Monto = monto;
+            Fecha = fecha;
+        }
+
+        public Movimiento()
+        {
+            IdMovimiento = 0;
+            CbuOrigen = 0;
+            CbuDestino = 0;
+            Monto = 0;
+            Fecha = new DateTime();
+        }
     }
 }

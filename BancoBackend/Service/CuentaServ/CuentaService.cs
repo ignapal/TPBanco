@@ -18,15 +18,12 @@ namespace BancoBackend.Service.CuentaServ
             cuentaDao = new CuentaDaoImpl();
             DataTable table = cuentaDao.GetCuentas();
 
-            List<TipoCuenta> tiposCuenta = new List<TipoCuenta>();
+            List<TipoCuenta> tiposCuenta = new();
             try
             {
                 foreach (DataRow row in table.Rows)
                 {
-                    TipoCuenta tipoCuenta = new TipoCuenta();
-                    tipoCuenta.IdTipoCuenta = Convert.ToInt32(row["idTipoCuenta"]);
-                    tipoCuenta.NombreTipoCuenta = row["tipoCuenta"].ToString();
-
+                    TipoCuenta tipoCuenta = new(Convert.ToInt32(row["idTipoCuenta"]), row["tipoCuenta"].ToString());
                     tiposCuenta.Add(tipoCuenta);
                 }
                 return tiposCuenta;

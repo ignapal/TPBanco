@@ -13,7 +13,7 @@ namespace BancoBackend.DAO.Implementaciones
     {
         public DataTable GetUsuario(Usuario usuario)
         {
-            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            Dictionary<string, object> parametros = new();
             parametros.Add("@nombreUsuario",usuario.Nombre);
             parametros.Add("@contrasenia",usuario.Contrasenia);
 
@@ -22,7 +22,7 @@ namespace BancoBackend.DAO.Implementaciones
 
         public bool InsertarUsuario(Usuario usuario)
         {
-            Dictionary<string, object> parametros = new Dictionary<string, object>();
+            Dictionary<string, object> parametros = new();
             parametros.Add("@nombreUsuario", usuario.Nombre);
             parametros.Add("@contrasenia", usuario.Contrasenia);
 
