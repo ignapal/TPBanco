@@ -17,7 +17,7 @@ namespace BancoBackend.Service.UsuarioServ
         {
             usuarioDao = new UsuarioDaoImpl();
             DataTable table = usuarioDao.GetUsuario(usuario);
-            Usuario usuario1 = new Usuario();
+            Usuario usuario1 = new();
 
             try
             {

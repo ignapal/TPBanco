@@ -32,12 +32,15 @@ namespace BancoFront.Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProgramaBanco));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarCuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoMovimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verMovimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
+            this.agregarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,9 +48,10 @@ namespace BancoFront.Forms
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.agregarClienteToolStripMenuItem,
-            this.agregarCuentasToolStripMenuItem,
+            this.cuentasToolStripMenuItem,
             this.movientosToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -56,16 +60,20 @@ namespace BancoFront.Forms
             // 
             // agregarClienteToolStripMenuItem
             // 
+            this.agregarClienteToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.agregarClienteToolStripMenuItem.Name = "agregarClienteToolStripMenuItem";
             this.agregarClienteToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.agregarClienteToolStripMenuItem.Text = "Agregar Cliente";
             this.agregarClienteToolStripMenuItem.Click += new System.EventHandler(this.agregarClienteToolStripMenuItem_Click);
             // 
-            // agregarCuentasToolStripMenuItem
+            // cuentasToolStripMenuItem
             // 
-            this.agregarCuentasToolStripMenuItem.Name = "agregarCuentasToolStripMenuItem";
-            this.agregarCuentasToolStripMenuItem.Size = new System.Drawing.Size(107, 20);
-            this.agregarCuentasToolStripMenuItem.Text = "Agregar Cuentas";
+            this.cuentasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarCuentaToolStripMenuItem,
+            this.eliminarCuentaToolStripMenuItem});
+            this.cuentasToolStripMenuItem.Name = "cuentasToolStripMenuItem";
+            this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.cuentasToolStripMenuItem.Text = "Cuentas";
             // 
             // movientosToolStripMenuItem
             // 
@@ -73,19 +81,20 @@ namespace BancoFront.Forms
             this.nuevoMovimientoToolStripMenuItem,
             this.verMovimientosToolStripMenuItem});
             this.movientosToolStripMenuItem.Name = "movientosToolStripMenuItem";
-            this.movientosToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
-            this.movientosToolStripMenuItem.Text = "Movientos";
+            this.movientosToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
+            this.movientosToolStripMenuItem.Text = "Movimientos";
             // 
             // nuevoMovimientoToolStripMenuItem
             // 
             this.nuevoMovimientoToolStripMenuItem.Name = "nuevoMovimientoToolStripMenuItem";
-            this.nuevoMovimientoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.nuevoMovimientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoMovimientoToolStripMenuItem.Text = "Nuevo Movimiento";
+            this.nuevoMovimientoToolStripMenuItem.Click += new System.EventHandler(this.nuevoMovimientoToolStripMenuItem_Click);
             // 
             // verMovimientosToolStripMenuItem
             // 
             this.verMovimientosToolStripMenuItem.Name = "verMovimientosToolStripMenuItem";
-            this.verMovimientosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.verMovimientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verMovimientosToolStripMenuItem.Text = "Ver Movimientos";
             // 
             // aboutToolStripMenuItem
@@ -94,6 +103,13 @@ namespace BancoFront.Forms
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar Sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -106,6 +122,18 @@ namespace BancoFront.Forms
             this.label2.Size = new System.Drawing.Size(494, 117);
             this.label2.TabIndex = 2;
             this.label2.Text = "Bienvenido";
+            // 
+            // agregarCuentaToolStripMenuItem
+            // 
+            this.agregarCuentaToolStripMenuItem.Name = "agregarCuentaToolStripMenuItem";
+            this.agregarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarCuentaToolStripMenuItem.Text = "Agregar Cuenta";
+            // 
+            // eliminarCuentaToolStripMenuItem
+            // 
+            this.eliminarCuentaToolStripMenuItem.Name = "eliminarCuentaToolStripMenuItem";
+            this.eliminarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarCuentaToolStripMenuItem.Text = "Eliminar Cuenta";
             // 
             // ProgramaBanco
             // 
@@ -135,11 +163,14 @@ namespace BancoFront.Forms
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem agregarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarCuentasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuentasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem movientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoMovimientoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verMovimientosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarCuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarCuentaToolStripMenuItem;
     }
 }

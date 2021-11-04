@@ -9,7 +9,9 @@ namespace BancoBackend.Service.CuentaServ
 {
     public interface ICuentaService
     {
-        List<TipoCuenta> GetCuentas();
+        List<TipoCuenta> GetTiposCuentas();
+        List<Cuenta> GetCuentas(int idCliente);
+        List<Cuenta> GetCuentasActivas(int idCliente);
         bool ValidarCbu(decimal cbu);
     }
 }

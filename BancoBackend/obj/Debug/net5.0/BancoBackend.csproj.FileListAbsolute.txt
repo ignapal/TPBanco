@@ -9,3 +9,4 @@ C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\bin\Debug\net5.0\BancoBa
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.dll
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\ref\BancoBackend.dll
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.pdb
+C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoBackend\obj\Debug\net5.0\BancoBackend.csproj.AssemblyReference.cache

@@ -25,7 +25,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            DialogResult respuesta = MessageBox.Show("¿Está seguro que desea volver? Perderá los datos que no haya insertado", "Volver", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult respuesta = MessageBox.Show("¿Está seguro que desea volver? Perderá los datos que no haya insertado", "Volver", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
             if (respuesta.Equals(DialogResult.Yes))
             {
                 this.Dispose();
@@ -188,7 +188,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
         private void dgvCuentas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvCuentas.CurrentCell.ColumnIndex == 3) {
-                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar la cuenta?", "Eliminar Cuenta", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult respuesta = MessageBox.Show("¿Está seguro que desea eliminar la cuenta?", "Eliminar Cuenta", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
                 if (respuesta.Equals(DialogResult.No))
                 {
                     return;

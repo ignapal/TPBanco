@@ -37,8 +37,35 @@ namespace BancoAPI.Controllers
                 return StatusCode(500,"Fallo al insertar cliente con cuentas");
             }
             
+        }
+        [HttpGet("/obtenerClientesActivos")]
+        public IActionResult GetClientesActivos()
+        {
+            List<Cliente> clientes = ServiceFactoryProducer.GetFactory().GetClienteService().GetClientesActivos();
+            if (clientes != null && clientes.Count > 0)
+            {
+                return Ok(clientes);
+            }
+            else
+            {
+                return Ok("No hay clientes activos");
+            }
 
-            
+        }
+
+        [HttpGet("/obtenerClientes")]
+        public IActionResult GetClientes()
+        {
+            List<Cliente> clientes = ServiceFactoryProducer.GetFactory().GetClienteService().GetClientes();
+            if (clientes != null && clientes.Count > 0)
+            {
+                return Ok(clientes);
+            }
+            else
+            {
+                return Ok("No hay clientes");
+            }
+
         }
     }
 }

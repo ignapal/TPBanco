@@ -13,5 +13,6 @@ namespace BancoBackend.DAO
         int GetUltimoId();
 
         bool InsertarCliente(Cliente cliente);
+        DataTable GetClientes();
     }
 }

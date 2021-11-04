@@ -34,5 +34,18 @@ namespace BancoFront.Forms
         {
             
         }
+
+        private void nuevoMovimientoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new NuevoMovimiento().ShowDialog();
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Desea Cerrar Sesion?", "Cerrar Sesion", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,MessageBoxDefaultButton.Button2) == DialogResult.Yes) {
+                this.Dispose();
+            }
+            return;
+        }
     }
 }

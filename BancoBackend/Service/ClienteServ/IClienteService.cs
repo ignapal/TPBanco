@@ -11,5 +11,7 @@ namespace BancoBackend.Service.ClienteServ
     {
         int GetUltimoId();
         bool InsertarCliente(Cliente cliente);
+        List<Cliente> GetClientesActivos();
+        List<Cliente> GetClientes();
     }
 }

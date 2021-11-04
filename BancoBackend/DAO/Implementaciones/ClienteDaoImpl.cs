@@ -10,6 +10,12 @@ namespace BancoBackend.DAO.Implementaciones
 {
     class ClienteDaoImpl : IClienteDao
     {
+        public DataTable GetClientes()
+        {
+            Dictionary<string, object> parametros = new();
+            return HelperDao.GetInstancia().GetTable("SP_OBTENER_CLIENTES", parametros);
+        }
+
         public int GetUltimoId()
         {
             return HelperDao.GetInstancia().GetUltimoId("OBTENER_PROXIMO_ID", "@proximoID");

@@ -9,7 +9,14 @@ namespace BancoBackend.DAO.Implementaciones
 {
     class CuentaDaoImpl : ICuentaDao
     {
-        public DataTable GetCuentas()
+        public DataTable GetCuentas(int idCliente)
+        {
+            Dictionary<string, object> parametros = new();
+            parametros.Add("@idCliente",idCliente);
+            return HelperDao.GetInstancia().GetTable("SP_OBTENER_CLIENTE_CUENTAS",parametros);
+        }
+
+        public DataTable GetTiposCuenta()
         {
             return HelperDao.GetInstancia().GetTable("OBTENER_TIPOS_CUENTA", new Dictionary<string,object>());
         }

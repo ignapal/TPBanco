@@ -9,8 +9,8 @@ namespace BancoBackend.DAO
 {
     interface ICuentaDao
     {
-        DataTable GetCuentas();
-
+        DataTable GetTiposCuenta();
+        DataTable GetCuentas(int idCliente);
         DataTable ValidarCbu(decimal cbu);
     }
 }

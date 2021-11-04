@@ -17,7 +17,7 @@ namespace BancoAPI.Controllers
         public IActionResult GetTipoCuentas() {
             try
             {
-                return Ok(ServiceFactoryProducer.GetFactory().GetCuentaService().GetCuentas());
+                return Ok(ServiceFactoryProducer.GetFactory().GetCuentaService().GetTiposCuentas());
             }
             catch (Exception)
             {
@@ -37,6 +37,36 @@ namespace BancoAPI.Controllers
             catch (Exception)
             {
                 return StatusCode(500);
+            }
+
+        }
+
+        [HttpGet("/obtenerCuentasActivas/{idCliente}")]
+        public IActionResult GetCuentasActivas(int idCliente)
+        {
+            List<Cuenta> cuentas = ServiceFactoryProducer.GetFactory().GetCuentaService().GetCuentasActivas(idCliente);
+            if (cuentas != null && cuentas.Count > 0)
+            {
+                return Ok(cuentas);
+            }
+            else
+            {
+                return Ok("No hay cuentas activos");
+            }
+
+        }
+
+        [HttpGet("/obtenerCuentas/{idCliente}")]
+        public IActionResult GetCuentas(int idCliente)
+        {
+            List<Cuenta> cuentas = ServiceFactoryProducer.GetFactory().GetCuentaService().GetCuentas(idCliente);
+            if (cuentas != null && cuentas.Count > 0)
+            {
+                return Ok(cuentas);
+            }
+            else
+            {
+                return Ok("No hay cuentas");
             }
 
         }

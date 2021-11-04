@@ -19,8 +19,5 @@
     <Compile Update="Forms\ProgramaPrincipal\AgregarCuentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ProgramaPrincipal\NuevoMovimiento.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

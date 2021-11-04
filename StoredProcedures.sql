@@ -8,7 +8,6 @@ BEGIN
 	where (u.nombreUsuario = @nombreUsuario)
 	and (u.contrasenia = @contrasenia)
 END
-delete from USUARIOS
 
 --Insertar Usuario
 CREATE PROCEDURE SP_INSERTAR_USUARIO 
@@ -20,13 +19,6 @@ BEGIN
 	values(@nombreUsuario,@contrasenia)
 END
 -----------------------------------------
-exec SP_INSERTAR_USUARIO 'Palermo',NULL
-exec SP_OBTENER_USUARIO 'Palermo','1234'
-select * from USUARIOS
-delete from USUARIOS
-
-
-
 ----------------------------------------
 --Obtener id ultimo cliente
 CREATE PROCEDURE OBTENER_PROXIMO_ID
@@ -35,6 +27,18 @@ AS
 	BEGIN
 		if (SELECT  MAX(idCliente) + 1 FROM CLIENTES) is not null
 			 set @proximoID = (SELECT  MAX(idCliente) + 1 FROM CLIENTES)
+		else
+			set @proximoID = 1
+		select @proximoID
+	END
+----------------------------------------
+--Obtener id ultimo movimiento
+CREATE PROCEDURE OBTENER_PROXIMO_ID_MOVIMIENTO
+@proximoID int output
+AS
+	BEGIN
+		if (SELECT  MAX(idMovimiento) + 1 FROM MOVIMIENTOS) is not null
+			 set @proximoID = (SELECT  MAX(idMovimiento) + 1 FROM MOVIMIENTOS)
 		else
 			set @proximoID = 1
 		select @proximoID
@@ -68,7 +72,7 @@ CREATE PROCEDURE SP_INSERTAR_CLIENTE
 AS
 	BEGIN
 		INSERT INTO CLIENTES
-		VALUES(@idCliente,@nombre,@apellido,@dni)
+		VALUES(@idCliente,@nombre,@apellido,@dni,null)
 	END
 ----------------------------------------
 --Insertar Cuenta
@@ -81,5 +85,75 @@ CREATE PROCEDURE SP_INSERTAR_CUENTA
 AS
 	BEGIN
 		INSERT INTO CUENTAS
-		VALUES(@idCliente,@cbu,@saldo,@idTipoCuenta,null)
+		VALUES(@idCliente,@cbu,@saldo,@idTipoCuenta,null,null)
 	END
+----------------------------------------
+--Eliminar cliente y cuentas
+CREATE PROCEDURE SP_ELIMINAR_CLIENTE
+@idCliente int
+AS
+	BEGIN
+		UPDATE CLIENTES
+		SET fechaBaja = GETDATE()
+		where idCliente = @idCliente
+
+		UPDATE CUENTAS
+		SET fechaBaja = GETDATE()
+		where idCliente = @idCliente
+	END
+----------------------------------------
+----------------------------------------
+--Eliminar cuenta
+CREATE PROCEDURE SP_ELIMINAR_CUENTA
+@cbu decimal(22,0)
+AS
+	BEGIN
+		UPDATE CUENTAS
+		SET fechaBaja = GETDATE()
+		where cbu = @cbu
+	END
+----------------------------------------
+----------------------------------------
+--Insertar Movimiento
+CREATE PROCEDURE SP_INSERTAR_MOVIMIENTO
+@idMovimiento int,
+@cbuOrigen decimal(22,0),
+@cbuDestino decimal(22,0),
+@monto decimal(19,4)
+AS
+	BEGIN
+		INSERT INTO MOVIMIENTOS
+		VALUES(@idMovimiento,@cbuOrigen,@cbuDestino,@monto,GETDATE())
+
+		UPDATE CUENTAS
+		set saldo = saldo + @monto
+		where cbu = @cbuDestino
+
+		UPDATE CUENTAS
+		set saldo = saldo - @monto,
+		ultimoMovimiento = @idMovimiento
+		where cbu = @cbuOrigen
+	END
+----------------------------------------
+----------------------------------------
+--Obtener Clientes 
+CREATE PROCEDURE SP_OBTENER_CLIENTES
+AS
+	BEGIN
+		select * 
+		from CLIENTES
+	END
+----------------------------------------
+
+----------------------------------------
+--Obtener cuentas de un cliente
+CREATE PROCEDURE SP_OBTENER_CLIENTE_CUENTAS
+@idCliente int
+AS
+	BEGIN
+		select * 
+		from CUENTAS
+		where idCliente = @idCliente
+	END
+----------------------------------------
+----------------------------------------

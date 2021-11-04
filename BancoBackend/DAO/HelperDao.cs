@@ -59,7 +59,7 @@ namespace BancoBackend.DAO
             {
                 connection.Open();
                 DataTable table = new();
-                if (parametros!= null || parametros.Count > 0)
+                if (parametros.Count > 0)
                 {
                     foreach (KeyValuePair<string, object> parametro in parametros)
                     {

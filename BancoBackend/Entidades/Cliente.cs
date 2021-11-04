@@ -15,8 +15,9 @@ namespace BancoBackend.Entidades
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public int Dni { get; set; }
-
         public List<Cuenta> Cuentas { get; set; }
+
+        public DateTime? FechaBaja { get; set; }
 
         public Cliente()
         {
@@ -27,13 +28,19 @@ namespace BancoBackend.Entidades
             Cuentas = new List<Cuenta>();
         }
 
-        public Cliente(int idCliente, string nombre, string apellido, int dni, List<Cuenta> cuentas)
+        public Cliente(int idCliente, string nombre, string apellido, int dni, List<Cuenta> cuentas,DateTime fechaBaja)
         {
             IdCliente = idCliente;
             Nombre = nombre;
             Apellido = apellido;
             Dni = dni;
             Cuentas = cuentas;
+            FechaBaja = fechaBaja;
+        }
+
+        public override string ToString()
+        {
+            return $"{Apellido}, {Nombre}";
         }
     }
 }

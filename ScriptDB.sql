@@ -17,18 +17,21 @@ CREATE TABLE USUARIOS(
 
 CREATE TABLE CLIENTES(
 	idCliente int,
-	nombre varchar(40),
-	apellido varchar(40),
-	nroDoc decimal(10,0),
+	nombre varchar(40) not null,
+	apellido varchar(40) not null,
+	nroDoc decimal(10,0) not null,
+	fechaBaja date
 
 	CONSTRAINT pk_clientes PRIMARY KEY(idCliente)
 )
 
 CREATE TABLE CUENTAS(
-	idCliente int,
+	idCliente int not null,
 	cbu decimal(22,0),
-	saldo decimal (19,4),
-	idTipoCuenta int
+	saldo decimal (19,4) not null,
+	idTipoCuenta int not null,
+	fechaBaja date
+
 
 	CONSTRAINT pk_cuentas PRIMARY KEY(cbu),
 	CONSTRAINT fk_cuentas_tipoCuenta FOREIGN KEY(idTipoCuenta) REFERENCES TIPOS_CUENTA(idTipoCuenta),
@@ -37,10 +40,10 @@ CREATE TABLE CUENTAS(
 
 CREATE TABLE MOVIMIENTOS(
 	idMovimiento int,
-	cbuOrigen decimal(22,0),
-	cbuDestino decimal(22,0),
-	monto decimal(19,4),
-	fecha datetime
+	cbuOrigen decimal(22,0) not null,
+	cbuDestino decimal(22,0) not null,
+	monto decimal(19,4) not null,
+	fecha datetime not null
 
 	CONSTRAINT pk_movimientos PRIMARY KEY(idMovimiento),
 	CONSTRAINT fk_movimientos_cbuRemitente FOREIGN KEY(cbuOrigen) REFERENCES CUENTAS(cbu)
@@ -53,11 +56,7 @@ ALTER TABLE CUENTAS
 ADD CONSTRAINT fk_cuentas_ultimoMovimiento FOREIGN KEY(ultimoMovimiento) REFERENCES MOVIMIENTOS(idMovimiento)
 
 insert into TIPOS_CUENTA values(1,'Caja de ahorro'),(2,'Cuenta Corriente');
-insert into CLIENTES values(1,'Martin', 'Palermo',43272181);
-insert into CUENTAS values(1,1234567891234567891234,20000,1,null),(1,0987654321098765432109,9500000,2,null);
-insert into MOVIMIENTOS values(1,1234567891234567891234,0987654321098765432200,30000,'2021-10-23 12:30:00'),(2,1234567891234567891234,0987654321025965432200,20000,'2021-10-23 18:20:00');
-
-select *  from USUARIOS
-select c.*,t.tipoCuenta  from CUENTAS c
-join TIPOS_CUENTA t on t.idTipoCuenta = c.idTipoCuenta
-select *  from CLIENTES
+insert into CLIENTES values(1,'Juan', 'Perez',43272181,null);
+insert into CLIENTES values(2,'Rodrigo', 'Malo',43272181,null);
+--insert into CUENTAS values(1,1234567891234567891234,20000,1,null),(1,0987654321098765432109,9500000,2,null);
+--insert into MOVIMIENTOS values(1,1234567891234567891234,0987654321098765432200,30000,'2021-10-23 12:30:00'),(2,1234567891234567891234,0987654321025965432200,20000,'2021-10-23 18:20:00');
