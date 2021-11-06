@@ -115,26 +115,51 @@ AS
 ----------------------------------------
 ----------------------------------------
 --Insertar Movimiento
-CREATE PROCEDURE SP_INSERTAR_MOVIMIENTO
+CREATE  alter PROCEDURE SP_INSERTAR_MOVIMIENTO
 @idMovimiento int,
 @cbuOrigen decimal(22,0),
 @cbuDestino decimal(22,0),
 @monto decimal(19,4)
 AS
 	BEGIN
-		INSERT INTO MOVIMIENTOS
-		VALUES(@idMovimiento,@cbuOrigen,@cbuDestino,@monto,GETDATE())
+		declare @saldoOrigen decimal;
 
-		UPDATE CUENTAS
-		set saldo = saldo + @monto
-		where cbu = @cbuDestino
-
-		UPDATE CUENTAS
-		set saldo = saldo - @monto,
-		ultimoMovimiento = @idMovimiento
+		select @saldoOrigen = saldo
+		from CUENTAS
 		where cbu = @cbuOrigen
+		if(@cbuOrigen = @cbuDestino)
+			raiserror('No puede transferir a una misma cuenta',16,1)
+		else
+			if(@saldoOrigen > @monto)
+				begin
+					begin try
+						INSERT INTO MOVIMIENTOS
+						VALUES(@idMovimiento,@cbuOrigen,@cbuDestino,@monto,GETDATE())
+					end try
+					begin catch 
+						raiserror('Error al insertar',16,1)
+						return
+					end catch
+
+					UPDATE CUENTAS
+					set saldo = saldo + @monto
+					where cbu = @cbuDestino
+
+					UPDATE CUENTAS
+					set saldo = saldo - @monto,
+					ultimoMovimiento = @idMovimiento
+					where cbu = @cbuOrigen
+
+					UPDATE CUENTAS
+					SET ultimoMovimiento = @idMovimiento
+					where cbu = @cbuOrigen
+				end
+			else
+				raiserror('Monto insuficiente',16,1)
 	END
 ----------------------------------------
+--Agregar saldo a cuentas para probar transacciones
+update cuentas set saldo = 20 where cbu = 1234567891234567891234
 ----------------------------------------
 --Obtener Clientes 
 CREATE PROCEDURE SP_OBTENER_CLIENTES

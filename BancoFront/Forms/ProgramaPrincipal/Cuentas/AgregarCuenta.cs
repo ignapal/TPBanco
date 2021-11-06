@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BancoFront.Forms.ProgramaPrincipal
+namespace BancoFront.Forms.ProgramaPrincipal.Cuentas
 {
-    public partial class AgregarCuentas : Form
+    public partial class AgregarCuenta : Form
     {
-        public AgregarCuentas()
+        public AgregarCuenta()
         {
             InitializeComponent();
         }

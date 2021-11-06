@@ -45,17 +45,5 @@ namespace BancoAPI.Controllers
                 return BadRequest("No se pudo insertar el usuario");
             }
         }
-
-        // PUT api/<UsuarioController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<UsuarioController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

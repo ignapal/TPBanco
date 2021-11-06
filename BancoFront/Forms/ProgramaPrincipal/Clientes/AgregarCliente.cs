@@ -122,6 +122,7 @@ namespace BancoFront.Forms.ProgramaPrincipal
                 try
                 {
                     cbuValidado = Convert.ToDecimal(txtCBU.Text);
+                    if (cbuValidado < 0) { throw new Exception(); }
                 }
                 catch (Exception)
                 {
@@ -174,7 +175,6 @@ namespace BancoFront.Forms.ProgramaPrincipal
             }
             return false;
         }
-
 
         private async void LimpiarNuevaInsercion()
         {

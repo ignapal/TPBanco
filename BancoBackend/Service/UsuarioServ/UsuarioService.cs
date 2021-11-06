@@ -16,11 +16,12 @@ namespace BancoBackend.Service.UsuarioServ
         public Usuario GetUsuario(Usuario usuario)
         {
             usuarioDao = new UsuarioDaoImpl();
-            DataTable table = usuarioDao.GetUsuario(usuario);
-            Usuario usuario1 = new();
+            
 
             try
             {
+                DataTable table = usuarioDao.GetUsuario(usuario);
+                Usuario usuario1 = new();
                 usuario1.Nombre = table.Rows[0]["nombreUsuario"].ToString();
                 usuario1.Contrasenia = table.Rows[0]["contrasenia"].ToString();
                 return usuario1;
@@ -34,7 +35,15 @@ namespace BancoBackend.Service.UsuarioServ
         public bool InsertarUsuario(Usuario usuario)
         {
             usuarioDao = new UsuarioDaoImpl();
-            return usuarioDao.InsertarUsuario(usuario);
+            try
+            {
+                return usuarioDao.InsertarUsuario(usuario);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            
         }
     }
 }

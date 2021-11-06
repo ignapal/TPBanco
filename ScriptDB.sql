@@ -55,8 +55,33 @@ ADD ultimoMovimiento int
 ALTER TABLE CUENTAS
 ADD CONSTRAINT fk_cuentas_ultimoMovimiento FOREIGN KEY(ultimoMovimiento) REFERENCES MOVIMIENTOS(idMovimiento)
 
+--Usuarios de Prueba para ingresar a la app | select * from USUARIOS
+insert into USUARIOS values('a','a')
+--Tipos de Cuenta de Prueba select * from TIPOS_CUENTA
 insert into TIPOS_CUENTA values(1,'Caja de ahorro'),(2,'Cuenta Corriente');
-insert into CLIENTES values(1,'Juan', 'Perez',43272181,null);
-insert into CLIENTES values(2,'Rodrigo', 'Malo',43272181,null);
---insert into CUENTAS values(1,1234567891234567891234,20000,1,null),(1,0987654321098765432109,9500000,2,null);
---insert into MOVIMIENTOS values(1,1234567891234567891234,0987654321098765432200,30000,'2021-10-23 12:30:00'),(2,1234567891234567891234,0987654321025965432200,20000,'2021-10-23 18:20:00');
+--Clientes de Prueba select * from CLIENTES
+insert into CLIENTES values(1,'Diego', 'Maradona',10000000,null);
+insert into CLIENTES values(2,'Martin', 'Palermo',49999999,null);
+insert into CLIENTES values(3,'Lionel', 'Messi',10101010,null);
+--Cuentas de Prueba select * from CUENTAS
+insert into CUENTAS values(1,1234567891234567891234,10000000,1,null,null)
+insert into CUENTAS values(1,1234567891234567891235,2000000,2,null,null)
+insert into CUENTAS values(1,1234567891234567891236,500000,1,null,null)
+insert into CUENTAS values(2,1234567891234567891237,1000000,2,null,null)
+insert into CUENTAS values(2,1234567891234567891238,3567000,1,null,null)
+insert into CUENTAS values(3,1234567891234567891239,990000,1,null,null)
+--select * from MOVIMIENTOS
+
+--Deletear datos de prueba
+--delete from CLIENTES
+--delete from MOVIMIENTOS
+--delete from CUENTAS
+--delete from USUARIOS
+--delete from TIPOS_CUENTA
+
+--Dar de baja/alta clientes
+--update CLIENTES set fechaBaja = GETDATE() where idCliente = 1
+--update CLIENTES set fechaBaja = null where idCliente = 1
+--Dar de baja/alta cuentas
+--update cuentas set fechaBaja = null where idCliente = 1
+--update cuentas set fechaBaja = GETDATE() where idCliente = 1

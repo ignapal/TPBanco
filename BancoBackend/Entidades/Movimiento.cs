@@ -8,7 +8,7 @@ namespace BancoBackend.Entidades
 {
     public class Movimiento
     {
-        public int IdMovimiento { get; set; }
+        public int? IdMovimiento { get; set; }
         public decimal CbuOrigen { get; set; }
         public decimal CbuDestino { get; set; }
         public decimal Monto { get; set; }

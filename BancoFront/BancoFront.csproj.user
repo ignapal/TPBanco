@@ -7,16 +7,19 @@
     <Compile Update="Forms\PantallaInicial\InicioSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ProgramaBanco.cs">
+    <Compile Update="Forms\ProgramaPrincipal\Cuentas\AgregarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ProgramaPrincipal\Cuentas\EliminarCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ProgramaPrincipal\ProgramaBanco.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\PantallaInicial\Registro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ProgramaPrincipal\AgregarCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\ProgramaPrincipal\AgregarCuentas.cs">
+    <Compile Update="Forms\ProgramaPrincipal\Clientes\AgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

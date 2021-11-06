@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BancoBackend.DAO
+namespace BancoBackend.Service.MovimientoServ
 {
-    interface IMovimientoDao
+    public interface IMovimientoService
     {
         bool InsertarMovimiento(Movimiento movimiento);
         int ObtenerUltimoId();

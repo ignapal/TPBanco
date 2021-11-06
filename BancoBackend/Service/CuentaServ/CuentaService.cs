@@ -30,7 +30,7 @@ namespace BancoBackend.Service.CuentaServ
                     cuenta.Saldo = Convert.ToDecimal(row["saldo"]);
                     cuenta.TipoCuenta = Convert.ToInt32(row["idTipoCuenta"]);
                     cuenta.FechaBaja = DBNull.Value.Equals(row["fechaBaja"]) ? null : Convert.ToDateTime(row["fechaBaja"]);
-                    cuenta.FechaBaja = DBNull.Value.Equals(row["ultimoMovimiento"]) ? null : Convert.ToDateTime(row["ultimoMovimiento"]);
+                    cuenta.UltimoMovimiento.IdMovimiento = DBNull.Value.Equals(row["ultimoMovimiento"]) ? null : Convert.ToInt32(row["ultimoMovimiento"]);
 
                     cuentas.Add(cuenta);
                 }
@@ -46,7 +46,16 @@ namespace BancoBackend.Service.CuentaServ
 
         public List<Cuenta> GetCuentasActivas(int idCliente)
         {
-            return GetCuentas(idCliente).FindAll(cuenta => cuenta.FechaBaja is null);
+            try
+            {
+                return GetCuentas(idCliente).FindAll(cuenta => cuenta.FechaBaja is null);
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+            
         }
 
         public List<TipoCuenta> GetTiposCuentas()

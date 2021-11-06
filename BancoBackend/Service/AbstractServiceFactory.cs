@@ -1,5 +1,6 @@
 ﻿using BancoBackend.Service.ClienteServ;
 using BancoBackend.Service.CuentaServ;
+using BancoBackend.Service.MovimientoServ;
 using BancoBackend.Service.UsuarioServ;
 using System;
 using System.Collections.Generic;
@@ -14,5 +15,6 @@ namespace BancoBackend.Service
          abstract public IUsuarioService GetUsuarioService();
          abstract public IClienteService GetClienteService();
          abstract public ICuentaService GetCuentaService();
+         abstract public IMovimientoService GetMovimientoService();
     }
 }

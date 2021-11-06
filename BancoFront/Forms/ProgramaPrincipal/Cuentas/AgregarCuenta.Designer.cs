@@ -1,7 +1,7 @@
 ﻿
-namespace BancoFront.Forms.ProgramaPrincipal
+namespace BancoFront.Forms.ProgramaPrincipal.Cuentas
 {
-    partial class AgregarCuentas
+    partial class AgregarCuenta
     {
         /// <summary>
         /// Required designer variable.
@@ -29,23 +29,10 @@ namespace BancoFront.Forms.ProgramaPrincipal
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgregarCuentas));
-            this.SuspendLayout();
-            // 
-            // AgregarCuentas
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "AgregarCuentas";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Cuentas";
-            this.ResumeLayout(false);
-
+            this.Text = "AgregarCuenta";
         }
 
         #endregion

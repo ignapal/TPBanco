@@ -134,9 +134,9 @@ namespace BancoBackend.DAO
                 DataTable table = new();
                 foreach (KeyValuePair<string, object> parametro in parametros)
                 {
-                    command.Parameters.AddWithValue(parametro.Key, parametro.Value.ToString());
+                    command.Parameters.AddWithValue(parametro.Key, parametro.Value);
                 }
-                table.Load(command.ExecuteReader());
+                command.ExecuteReader();
                 connection.Close();
                 return true;
             }
