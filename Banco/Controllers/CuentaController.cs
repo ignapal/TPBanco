@@ -83,5 +83,19 @@ namespace BancoAPI.Controllers
             }
 
         }
+
+        [HttpGet("/eliminarCuenta/{cbu}")]
+        public IActionResult EliminarCuenta(decimal cbu)
+        {
+            try
+            {
+                return Ok(ServiceFactoryProducer.GetFactory().GetCuentaService().EliminarCuenta(cbu));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "No se pudo eliminar la cuenta");
+            }
+
+        }
     }
 }

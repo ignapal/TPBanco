@@ -10,6 +10,13 @@ namespace BancoBackend.DAO.Implementaciones
 {
     class CuentaDaoImpl : ICuentaDao
     {
+        public bool EliminarCuenta(decimal cbu)
+        {
+            Dictionary<string, object> parametros = new();
+            parametros.Add("@cbu", cbu);
+            return HelperDao.GetInstancia().InsertarEntidad("SP_ELIMINAR_CUENTA",parametros);
+        }
+
         public DataTable GetCuentas(int idCliente)
         {
             Dictionary<string, object> parametros = new();

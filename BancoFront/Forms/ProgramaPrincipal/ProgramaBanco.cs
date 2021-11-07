@@ -53,5 +53,10 @@ namespace BancoFront.Forms
         {
             new AgregarCuenta().ShowDialog();
         }
+
+        private void eliminarCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new EliminarCuenta().ShowDialog();
+        }
     }
 }

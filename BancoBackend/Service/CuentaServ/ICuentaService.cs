@@ -15,5 +15,6 @@ namespace BancoBackend.Service.CuentaServ
         bool ValidarCbu(decimal cbu);
 
         bool InsertarCuenta(Cuenta cuenta);
+        bool EliminarCuenta(decimal cbu);
     }
 }

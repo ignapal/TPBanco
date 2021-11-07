@@ -133,9 +133,9 @@ namespace BancoFront.Forms.ProgramaPrincipal.Cuentas
             this.btnVolver.BackColor = System.Drawing.Color.Silver;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.ForeColor = System.Drawing.Color.White;
-            this.btnVolver.Location = new System.Drawing.Point(653, 382);
+            this.btnVolver.Location = new System.Drawing.Point(603, 382);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(135, 30);
+            this.btnVolver.Size = new System.Drawing.Size(152, 30);
             this.btnVolver.TabIndex = 24;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;

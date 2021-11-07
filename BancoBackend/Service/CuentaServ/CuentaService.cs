@@ -14,6 +14,12 @@ namespace BancoBackend.Service.CuentaServ
     {
         ICuentaDao cuentaDao;
 
+        public bool EliminarCuenta(decimal cbu)
+        {
+            cuentaDao = new CuentaDaoImpl();
+            return cuentaDao.EliminarCuenta(cbu);
+        }
+
         public List<Cuenta> GetCuentas(int idCliente)
         {
             try

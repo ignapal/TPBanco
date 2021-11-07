@@ -35,4 +35,3 @@ C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.pdb
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.genruntimeconfig.cache
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\lnapal\Desktop\UTN\TpProgramacion\Banco\obj\Debug\net5.0\BancoAPI.csproj.CopyComplete

@@ -87,6 +87,7 @@ namespace BancoFront.Forms
             this.eliminarCuentaToolStripMenuItem.Name = "eliminarCuentaToolStripMenuItem";
             this.eliminarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.eliminarCuentaToolStripMenuItem.Text = "Eliminar Cuenta";
+            this.eliminarCuentaToolStripMenuItem.Click += new System.EventHandler(this.eliminarCuentaToolStripMenuItem_Click);
             // 
             // movientosToolStripMenuItem
             // 

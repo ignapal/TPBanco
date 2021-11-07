@@ -14,5 +14,6 @@ namespace BancoBackend.DAO
         DataTable GetCuentas(int idCliente);
         DataTable ValidarCbu(decimal cbu);
         bool InsertarCuenta(Cuenta cuenta);
+        bool EliminarCuenta(decimal cbu);
     }
 }
