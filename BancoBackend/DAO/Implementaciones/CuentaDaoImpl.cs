@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoBackend.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -19,6 +20,17 @@ namespace BancoBackend.DAO.Implementaciones
         public DataTable GetTiposCuenta()
         {
             return HelperDao.GetInstancia().GetTable("OBTENER_TIPOS_CUENTA", new Dictionary<string,object>());
+        }
+
+        public bool InsertarCuenta(Cuenta cuenta)
+        {
+            Dictionary<string, object> parametros = new();
+            parametros.Add("@idCliente", cuenta.IdCliente);
+            parametros.Add("@cbu", cuenta.Cbu);
+            parametros.Add("@saldo", cuenta.Saldo);
+            parametros.Add("@idTipoCuenta", cuenta.TipoCuenta);
+
+            return HelperDao.GetInstancia().InsertarEntidad("SP_INSERTAR_CUENTA", parametros);
         }
 
         public DataTable ValidarCbu(decimal cbu)

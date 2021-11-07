@@ -80,6 +80,12 @@ namespace BancoBackend.Service.CuentaServ
             
         }
 
+        public bool InsertarCuenta(Cuenta cuenta)
+        {
+            cuentaDao = new CuentaDaoImpl();
+            return cuentaDao.InsertarCuenta(cuenta);
+        }
+
         public bool ValidarCbu(decimal cbu)
         {
             try

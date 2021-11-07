@@ -13,5 +13,7 @@ namespace BancoBackend.Service.CuentaServ
         List<Cuenta> GetCuentas(int idCliente);
         List<Cuenta> GetCuentasActivas(int idCliente);
         bool ValidarCbu(decimal cbu);
+
+        bool InsertarCuenta(Cuenta cuenta);
     }
 }

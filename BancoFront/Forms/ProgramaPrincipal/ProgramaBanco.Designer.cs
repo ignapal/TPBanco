@@ -33,14 +33,14 @@ namespace BancoFront.Forms
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.agregarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoMovimientoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verMovimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
-            this.agregarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eliminarCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,19 @@ namespace BancoFront.Forms
             this.cuentasToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.cuentasToolStripMenuItem.Text = "Cuentas";
             // 
+            // agregarCuentaToolStripMenuItem
+            // 
+            this.agregarCuentaToolStripMenuItem.Name = "agregarCuentaToolStripMenuItem";
+            this.agregarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarCuentaToolStripMenuItem.Text = "Agregar Cuenta";
+            this.agregarCuentaToolStripMenuItem.Click += new System.EventHandler(this.agregarCuentaToolStripMenuItem_Click);
+            // 
+            // eliminarCuentaToolStripMenuItem
+            // 
+            this.eliminarCuentaToolStripMenuItem.Name = "eliminarCuentaToolStripMenuItem";
+            this.eliminarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarCuentaToolStripMenuItem.Text = "Eliminar Cuenta";
+            // 
             // movientosToolStripMenuItem
             // 
             this.movientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -87,14 +100,14 @@ namespace BancoFront.Forms
             // nuevoMovimientoToolStripMenuItem
             // 
             this.nuevoMovimientoToolStripMenuItem.Name = "nuevoMovimientoToolStripMenuItem";
-            this.nuevoMovimientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoMovimientoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.nuevoMovimientoToolStripMenuItem.Text = "Nuevo Movimiento";
             this.nuevoMovimientoToolStripMenuItem.Click += new System.EventHandler(this.nuevoMovimientoToolStripMenuItem_Click);
             // 
             // verMovimientosToolStripMenuItem
             // 
             this.verMovimientosToolStripMenuItem.Name = "verMovimientosToolStripMenuItem";
-            this.verMovimientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verMovimientosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.verMovimientosToolStripMenuItem.Text = "Ver Movimientos";
             // 
             // aboutToolStripMenuItem
@@ -122,18 +135,6 @@ namespace BancoFront.Forms
             this.label2.Size = new System.Drawing.Size(494, 117);
             this.label2.TabIndex = 2;
             this.label2.Text = "Bienvenido";
-            // 
-            // agregarCuentaToolStripMenuItem
-            // 
-            this.agregarCuentaToolStripMenuItem.Name = "agregarCuentaToolStripMenuItem";
-            this.agregarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarCuentaToolStripMenuItem.Text = "Agregar Cuenta";
-            // 
-            // eliminarCuentaToolStripMenuItem
-            // 
-            this.eliminarCuentaToolStripMenuItem.Name = "eliminarCuentaToolStripMenuItem";
-            this.eliminarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.eliminarCuentaToolStripMenuItem.Text = "Eliminar Cuenta";
             // 
             // ProgramaBanco
             // 

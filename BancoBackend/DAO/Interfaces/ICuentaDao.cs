@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoBackend.Entidades;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace BancoBackend.DAO
         DataTable GetTiposCuenta();
         DataTable GetCuentas(int idCliente);
         DataTable ValidarCbu(decimal cbu);
+        bool InsertarCuenta(Cuenta cuenta);
     }
 }

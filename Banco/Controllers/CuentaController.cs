@@ -70,5 +70,18 @@ namespace BancoAPI.Controllers
             }
 
         }
+        [HttpPost("/insertarCuenta")]
+        public IActionResult InsertarCuenta(Cuenta cuenta)
+        {
+            try
+            {
+                return Ok(ServiceFactoryProducer.GetFactory().GetCuentaService().InsertarCuenta(cuenta));
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "No se pudo insertar la cuenta");
+            }
+
+        }
     }
 }

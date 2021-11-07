@@ -33,4 +33,3 @@ C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\B
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.ProgramaPrincipal.NuevoMovimiento.resources
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.ProgramaPrincipal.Cuentas.AgregarCuenta.resources
 C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.Forms.ProgramaPrincipal.Cuentas.EliminarCuenta.resources
-C:\Users\lnapal\Desktop\UTN\TpProgramacion\BancoFront\obj\Debug\net5.0-windows\BancoFront.csproj.CopyComplete

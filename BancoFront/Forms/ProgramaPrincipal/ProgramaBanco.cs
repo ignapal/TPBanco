@@ -1,5 +1,6 @@
 ﻿using BancoBackend.Entidades;
 using BancoFront.Forms.ProgramaPrincipal;
+using BancoFront.Forms.ProgramaPrincipal.Cuentas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,6 +47,11 @@ namespace BancoFront.Forms
                 this.Dispose();
             }
             return;
+        }
+
+        private void agregarCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new AgregarCuenta().ShowDialog();
         }
     }
 }
