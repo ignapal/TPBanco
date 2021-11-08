@@ -184,8 +184,7 @@ AS
 --Reporte
 CREATE PROCEDURE SP_REPORTE_MOVIMIENTOS
 @idCliente int,
-@tipoCuenta varchar(50),
-@cbuOrigen decimal(22,0),
+@idTipoCuenta int,
 @montoDesde int,
 @montoHasta int,
 @fechaDesde date,
@@ -198,8 +197,7 @@ BEGIN
 	join CLIENTES c on c.idCliente = cu.idCliente
 	join TIPOS_CUENTA tc on tc.idTipoCuenta = cu.idTipoCuenta
 	WHERE (@idCliente is null or cu.idCliente = @idCliente)
-	AND (@cbuOrigen is null or cu.cbu = @cbuOrigen)
-	AND (@tipoCuenta is null or tc.tipoCuenta = @tipoCuenta)
+	AND (@idTipoCuenta is null or cu.idTipoCuenta = @idTipoCuenta)
 	AND ((@montoDesde is null and @montoHasta is null) or (@montoDesde is null and m.monto <= @montoHasta ) or (@montoHasta is null and m.monto >= @montoDesde ) or (m.monto between @montoDesde and @montoHasta))
 	AND ((@fechaDesde is null and @fechaHasta is null) or (@fechaDesde is null and m.fecha <= @fechaHasta ) or (@fechaHasta is null and m.fecha >= @fechaDesde ) or (m.fecha between @fechaDesde and @fechaHasta))
 END
