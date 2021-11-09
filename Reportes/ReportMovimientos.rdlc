@@ -12,13 +12,13 @@
               <Width>3.52253cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.21586cm</Width>
+              <Width>4.58086cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>6.41005cm</Width>
+              <Width>4.9813cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.28982cm</Width>
+              <Width>3.89294cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>3.20503cm</Width>
@@ -447,25 +447,26 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
+        <KeepTogether>true</KeepTogether>
         <DataSetName>DataSetMov</DataSetName>
-        <Top>2.19287cm</Top>
-        <Left>0.74083cm</Left>
         <Height>1.2cm</Height>
-        <Width>25.84831cm</Width>
+        <Width>23.3877cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
+            <Width>3pt</Width>
           </Border>
+          <BackgroundColor>White</BackgroundColor>
           <VerticalAlign>Middle</VerticalAlign>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2in</Height>
+    <Height>0.47244in</Height>
     <Style>
       <BackgroundColor>LightGrey</BackgroundColor>
     </Style>
   </Body>
-  <Width>10.69733in</Width>
+  <Width>9.20775in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
