@@ -68,7 +68,6 @@ C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\staticwebassets\BancoAPI.
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\staticwebassets\BancoAPI.StaticWebAssets.xml
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\scopedcss\bundle\BancoAPI.styles.css
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.RazorTargetAssemblyInfo.cache
-C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.csproj.CopyComplete
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.dll
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\ref\BancoAPI.dll
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.pdb
