@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj": {}
+    "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
+    "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj",
+        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj",
         "projectName": "BancoBackend",
-        "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj",
+        "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj",
         "packagesPath": "C:\\Users\\lnapal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\obj\\",
+        "outputPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

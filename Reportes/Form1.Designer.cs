@@ -57,6 +57,10 @@ namespace Reportes
             this.chFDesde = new System.Windows.Forms.CheckBox();
             this.chMHasta = new System.Windows.Forms.CheckBox();
             this.chFHasta = new System.Windows.Forms.CheckBox();
+            this.cboTiposCuenta = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.chTipoCuenta = new System.Windows.Forms.CheckBox();
+            this.chCliente = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.SP_REPORTE_MOVIMIENTOSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetMov)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -95,7 +99,7 @@ namespace Reportes
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.reportViewer1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 288);
+            this.groupBox1.Location = new System.Drawing.Point(12, 386);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(776, 332);
             this.groupBox1.TabIndex = 1;
@@ -106,7 +110,7 @@ namespace Reportes
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.label1.Location = new System.Drawing.Point(353, 121);
+            this.label1.Location = new System.Drawing.Point(353, 180);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 22);
             this.label1.TabIndex = 2;
@@ -116,7 +120,7 @@ namespace Reportes
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.label2.Location = new System.Drawing.Point(653, 121);
+            this.label2.Location = new System.Drawing.Point(653, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 22);
             this.label2.TabIndex = 3;
@@ -137,7 +141,7 @@ namespace Reportes
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.label4.Location = new System.Drawing.Point(267, 155);
+            this.label4.Location = new System.Drawing.Point(267, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(21, 22);
             this.label4.TabIndex = 5;
@@ -147,7 +151,7 @@ namespace Reportes
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.label5.Location = new System.Drawing.Point(558, 155);
+            this.label5.Location = new System.Drawing.Point(558, 214);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(21, 22);
             this.label5.TabIndex = 6;
@@ -157,7 +161,7 @@ namespace Reportes
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.label6.Location = new System.Drawing.Point(100, 78);
+            this.label6.Location = new System.Drawing.Point(94, 112);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 22);
             this.label6.TabIndex = 7;
@@ -176,7 +180,8 @@ namespace Reportes
             this.idCliente,
             this.cliente,
             this.seleccionar});
-            this.dgvClientes.Location = new System.Drawing.Point(12, 107);
+            this.dgvClientes.Enabled = false;
+            this.dgvClientes.Location = new System.Drawing.Point(12, 166);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -218,7 +223,7 @@ namespace Reportes
             // 
             this.lblCliente.AutoSize = true;
             this.lblCliente.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.lblCliente.Location = new System.Drawing.Point(483, 78);
+            this.lblCliente.Location = new System.Drawing.Point(353, 112);
             this.lblCliente.Name = "lblCliente";
             this.lblCliente.Size = new System.Drawing.Size(0, 22);
             this.lblCliente.TabIndex = 9;
@@ -226,7 +231,7 @@ namespace Reportes
             // dtpDesde
             // 
             this.dtpDesde.Enabled = false;
-            this.dtpDesde.Location = new System.Drawing.Point(294, 213);
+            this.dtpDesde.Location = new System.Drawing.Point(294, 272);
             this.dtpDesde.Name = "dtpDesde";
             this.dtpDesde.Size = new System.Drawing.Size(200, 20);
             this.dtpDesde.TabIndex = 10;
@@ -234,7 +239,7 @@ namespace Reportes
             // dtpHasta
             // 
             this.dtpHasta.Enabled = false;
-            this.dtpHasta.Location = new System.Drawing.Point(585, 213);
+            this.dtpHasta.Location = new System.Drawing.Point(585, 272);
             this.dtpHasta.Name = "dtpHasta";
             this.dtpHasta.Size = new System.Drawing.Size(200, 20);
             this.dtpHasta.TabIndex = 11;
@@ -242,7 +247,7 @@ namespace Reportes
             // nudHasta
             // 
             this.nudHasta.Enabled = false;
-            this.nudHasta.Location = new System.Drawing.Point(585, 155);
+            this.nudHasta.Location = new System.Drawing.Point(585, 214);
             this.nudHasta.Maximum = new decimal(new int[] {
             -1981284353,
             -1966660860,
@@ -265,7 +270,7 @@ namespace Reportes
             // nudDesde
             // 
             this.nudDesde.Enabled = false;
-            this.nudDesde.Location = new System.Drawing.Point(294, 155);
+            this.nudDesde.Location = new System.Drawing.Point(294, 214);
             this.nudDesde.Maximum = new decimal(new int[] {
             -1981284353,
             -1966660860,
@@ -291,7 +296,7 @@ namespace Reportes
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscar.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(12, 243);
+            this.btnBuscar.Location = new System.Drawing.Point(12, 323);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(773, 39);
             this.btnBuscar.TabIndex = 14;
@@ -302,7 +307,7 @@ namespace Reportes
             // chMDesde
             // 
             this.chMDesde.AutoSize = true;
-            this.chMDesde.Location = new System.Drawing.Point(294, 135);
+            this.chMDesde.Location = new System.Drawing.Point(294, 194);
             this.chMDesde.Name = "chMDesde";
             this.chMDesde.Size = new System.Drawing.Size(15, 14);
             this.chMDesde.TabIndex = 15;
@@ -312,7 +317,7 @@ namespace Reportes
             // chFDesde
             // 
             this.chFDesde.AutoSize = true;
-            this.chFDesde.Location = new System.Drawing.Point(294, 193);
+            this.chFDesde.Location = new System.Drawing.Point(294, 252);
             this.chFDesde.Name = "chFDesde";
             this.chFDesde.Size = new System.Drawing.Size(15, 14);
             this.chFDesde.TabIndex = 16;
@@ -322,7 +327,7 @@ namespace Reportes
             // chMHasta
             // 
             this.chMHasta.AutoSize = true;
-            this.chMHasta.Location = new System.Drawing.Point(585, 135);
+            this.chMHasta.Location = new System.Drawing.Point(585, 194);
             this.chMHasta.Name = "chMHasta";
             this.chMHasta.Size = new System.Drawing.Size(15, 14);
             this.chMHasta.TabIndex = 17;
@@ -332,18 +337,62 @@ namespace Reportes
             // chFHasta
             // 
             this.chFHasta.AutoSize = true;
-            this.chFHasta.Location = new System.Drawing.Point(585, 193);
+            this.chFHasta.Location = new System.Drawing.Point(585, 252);
             this.chFHasta.Name = "chFHasta";
             this.chFHasta.Size = new System.Drawing.Size(15, 14);
             this.chFHasta.TabIndex = 18;
             this.chFHasta.UseVisualStyleBackColor = true;
             this.chFHasta.CheckedChanged += new System.EventHandler(this.chFHasta_CheckedChanged);
             // 
+            // cboTiposCuenta
+            // 
+            this.cboTiposCuenta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTiposCuenta.Enabled = false;
+            this.cboTiposCuenta.FormattingEnabled = true;
+            this.cboTiposCuenta.Location = new System.Drawing.Point(584, 137);
+            this.cboTiposCuenta.Name = "cboTiposCuenta";
+            this.cboTiposCuenta.Size = new System.Drawing.Size(201, 21);
+            this.cboTiposCuenta.TabIndex = 19;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F);
+            this.label7.Location = new System.Drawing.Point(612, 112);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 22);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Tipo de Cuenta";
+            // 
+            // chTipoCuenta
+            // 
+            this.chTipoCuenta.AutoSize = true;
+            this.chTipoCuenta.Location = new System.Drawing.Point(584, 117);
+            this.chTipoCuenta.Name = "chTipoCuenta";
+            this.chTipoCuenta.Size = new System.Drawing.Size(15, 14);
+            this.chTipoCuenta.TabIndex = 21;
+            this.chTipoCuenta.UseVisualStyleBackColor = true;
+            this.chTipoCuenta.CheckedChanged += new System.EventHandler(this.chTipoCuenta_CheckedChanged);
+            // 
+            // chCliente
+            // 
+            this.chCliente.AutoSize = true;
+            this.chCliente.Location = new System.Drawing.Point(15, 137);
+            this.chCliente.Name = "chCliente";
+            this.chCliente.Size = new System.Drawing.Size(15, 14);
+            this.chCliente.TabIndex = 22;
+            this.chCliente.UseVisualStyleBackColor = true;
+            this.chCliente.CheckedChanged += new System.EventHandler(this.chCliente_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 632);
+            this.ClientSize = new System.Drawing.Size(800, 730);
+            this.Controls.Add(this.chCliente);
+            this.Controls.Add(this.chTipoCuenta);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cboTiposCuenta);
             this.Controls.Add(this.chFHasta);
             this.Controls.Add(this.chMHasta);
             this.Controls.Add(this.chFDesde);
@@ -403,6 +452,10 @@ namespace Reportes
         private System.Windows.Forms.CheckBox chFDesde;
         private System.Windows.Forms.CheckBox chMHasta;
         private System.Windows.Forms.CheckBox chFHasta;
+        private System.Windows.Forms.ComboBox cboTiposCuenta;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox chTipoCuenta;
+        private System.Windows.Forms.CheckBox chCliente;
     }
 }
 
