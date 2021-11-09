@@ -1,6 +1,7 @@
 ﻿using BancoBackend.Entidades;
 using BancoFront.Forms.ProgramaPrincipal;
 using BancoFront.Forms.ProgramaPrincipal.Cuentas;
+using Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -57,6 +58,11 @@ namespace BancoFront.Forms
         private void eliminarCuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             new EliminarCuenta().ShowDialog();
+        }
+
+        private void verMovimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form1().ShowDialog();
         }
     }
 }

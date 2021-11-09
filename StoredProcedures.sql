@@ -191,7 +191,7 @@ CREATE PROCEDURE SP_REPORTE_MOVIMIENTOS
 @fechaHasta date
 AS
 BEGIN
-	SELECT c.apellido +', '+ c.nombre as Cliente,tc.tipoCuenta as 'Tipo de Cuenta',m.cbuOrigen as Desde, m.cbuDestino as Para, CAST(m.monto as decimal (19,2)) as Monto, m.fecha as Fecha
+	SELECT c.apellido +', '+ c.nombre as Cliente,tc.tipoCuenta as 'TipoCuenta',m.cbuOrigen as Desde, m.cbuDestino as Para, CAST(m.monto as decimal (19,2)) as Monto, m.fecha as Fecha
 	FROM MOVIMIENTOS m
 	join CUENTAS cu on cu.cbu = m.cbuOrigen
 	join CLIENTES c on c.idCliente = cu.idCliente

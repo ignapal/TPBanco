@@ -78,14 +78,14 @@ namespace BancoFront.Forms
             // agregarCuentaToolStripMenuItem
             // 
             this.agregarCuentaToolStripMenuItem.Name = "agregarCuentaToolStripMenuItem";
-            this.agregarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarCuentaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.agregarCuentaToolStripMenuItem.Text = "Agregar Cuenta";
             this.agregarCuentaToolStripMenuItem.Click += new System.EventHandler(this.agregarCuentaToolStripMenuItem_Click);
             // 
             // eliminarCuentaToolStripMenuItem
             // 
             this.eliminarCuentaToolStripMenuItem.Name = "eliminarCuentaToolStripMenuItem";
-            this.eliminarCuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.eliminarCuentaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.eliminarCuentaToolStripMenuItem.Text = "Eliminar Cuenta";
             this.eliminarCuentaToolStripMenuItem.Click += new System.EventHandler(this.eliminarCuentaToolStripMenuItem_Click);
             // 
@@ -101,15 +101,16 @@ namespace BancoFront.Forms
             // nuevoMovimientoToolStripMenuItem
             // 
             this.nuevoMovimientoToolStripMenuItem.Name = "nuevoMovimientoToolStripMenuItem";
-            this.nuevoMovimientoToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.nuevoMovimientoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoMovimientoToolStripMenuItem.Text = "Nuevo Movimiento";
             this.nuevoMovimientoToolStripMenuItem.Click += new System.EventHandler(this.nuevoMovimientoToolStripMenuItem_Click);
             // 
             // verMovimientosToolStripMenuItem
             // 
             this.verMovimientosToolStripMenuItem.Name = "verMovimientosToolStripMenuItem";
-            this.verMovimientosToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
+            this.verMovimientosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.verMovimientosToolStripMenuItem.Text = "Ver Movimientos";
+            this.verMovimientosToolStripMenuItem.Click += new System.EventHandler(this.verMovimientosToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 

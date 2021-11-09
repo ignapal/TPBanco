@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cQx/CMtJHlKnF4A0gL5R3YxFf1IvV+1u6P6ylHhz6hAfMH7RAeRneUCanXU/VFlBho2+xgn5IxMwcdlQHyzClw==",
+  "dgSpecHash": "jWkXVq2JnYpIroyzjYxSUMiLDMwPYBZMYmZHjkfrbz18fMbOuzeYYWe4H+QycJf7461aegZQ2j13lwWRE2XoSA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lnapal\\Desktop\\UTN\\TpProgramacion\\BancoBackend\\BancoBackend.csproj",
+  "projectFilePath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lnapal\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\lnapal\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
