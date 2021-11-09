@@ -185,8 +185,8 @@ AS
 CREATE PROCEDURE SP_REPORTE_MOVIMIENTOS
 @idCliente int,
 @idTipoCuenta int,
-@montoDesde int,
-@montoHasta int,
+@montoDesde decimal(19,4),
+@montoHasta decimal(19,4),
 @fechaDesde date,
 @fechaHasta date
 AS
@@ -202,3 +202,4 @@ BEGIN
 	AND ((@fechaDesde is null and @fechaHasta is null) or (@fechaDesde is null and m.fecha <= @fechaHasta ) or (@fechaHasta is null and m.fecha >= @fechaDesde ) or (m.fecha between @fechaDesde and @fechaHasta))
 END
 ----------------------------------------
+select * from MOVIMIENTOS

@@ -466,7 +466,10 @@ namespace Reportes {
                 this.columnCliente.ReadOnly = true;
                 this.columnCliente.MaxLength = 82;
                 this.columnTipoCuenta.MaxLength = 40;
+                this.columnDesde.AllowDBNull = false;
+                this.columnPara.AllowDBNull = false;
                 this.columnMonto.ReadOnly = true;
+                this.columnFecha.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -643,12 +646,7 @@ namespace Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Desde {
                 get {
-                    try {
-                        return ((decimal)(this[this.tableSP_REPORTE_MOVIMIENTOS.DesdeColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Desde\' in table \'SP_REPORTE_MOVIMIENTOS\' is DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tableSP_REPORTE_MOVIMIENTOS.DesdeColumn]));
                 }
                 set {
                     this[this.tableSP_REPORTE_MOVIMIENTOS.DesdeColumn] = value;
@@ -659,12 +657,7 @@ namespace Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public decimal Para {
                 get {
-                    try {
-                        return ((decimal)(this[this.tableSP_REPORTE_MOVIMIENTOS.ParaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Para\' in table \'SP_REPORTE_MOVIMIENTOS\' is DBNull.", e);
-                    }
+                    return ((decimal)(this[this.tableSP_REPORTE_MOVIMIENTOS.ParaColumn]));
                 }
                 set {
                     this[this.tableSP_REPORTE_MOVIMIENTOS.ParaColumn] = value;
@@ -691,12 +684,7 @@ namespace Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime Fecha {
                 get {
-                    try {
-                        return ((global::System.DateTime)(this[this.tableSP_REPORTE_MOVIMIENTOS.FechaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Fecha\' in table \'SP_REPORTE_MOVIMIENTOS\' is DBNull.", e);
-                    }
+                    return ((global::System.DateTime)(this[this.tableSP_REPORTE_MOVIMIENTOS.FechaColumn]));
                 }
                 set {
                     this[this.tableSP_REPORTE_MOVIMIENTOS.FechaColumn] = value;
@@ -729,30 +717,6 @@ namespace Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsDesdeNull() {
-                return this.IsNull(this.tableSP_REPORTE_MOVIMIENTOS.DesdeColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetDesdeNull() {
-                this[this.tableSP_REPORTE_MOVIMIENTOS.DesdeColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsParaNull() {
-                return this.IsNull(this.tableSP_REPORTE_MOVIMIENTOS.ParaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetParaNull() {
-                this[this.tableSP_REPORTE_MOVIMIENTOS.ParaColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsMontoNull() {
                 return this.IsNull(this.tableSP_REPORTE_MOVIMIENTOS.MontoColumn);
             }
@@ -761,18 +725,6 @@ namespace Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetMontoNull() {
                 this[this.tableSP_REPORTE_MOVIMIENTOS.MontoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsFechaNull() {
-                return this.IsNull(this.tableSP_REPORTE_MOVIMIENTOS.FechaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetFechaNull() {
-                this[this.tableSP_REPORTE_MOVIMIENTOS.FechaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -962,8 +914,8 @@ namespace Reportes.DataSetMovTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTipoCuenta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@montoDesde", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@montoHasta", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@montoDesde", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 19, 4, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@montoHasta", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 19, 4, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaDesde", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaHasta", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -972,7 +924,7 @@ namespace Reportes.DataSetMovTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetMov.SP_REPORTE_MOVIMIENTOSDataTable dataTable, global::System.Nullable<int> idCliente, global::System.Nullable<int> idTipoCuenta, global::System.Nullable<int> montoDesde, global::System.Nullable<int> montoHasta, global::System.Nullable<global::System.DateTime> fechaDesde, global::System.Nullable<global::System.DateTime> fechaHasta) {
+        public virtual int Fill(DataSetMov.SP_REPORTE_MOVIMIENTOSDataTable dataTable, global::System.Nullable<int> idCliente, global::System.Nullable<int> idTipoCuenta, global::System.Nullable<decimal> montoDesde, global::System.Nullable<decimal> montoHasta, global::System.Nullable<global::System.DateTime> fechaDesde, global::System.Nullable<global::System.DateTime> fechaHasta) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idCliente.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idCliente.Value));
@@ -987,13 +939,13 @@ namespace Reportes.DataSetMovTableAdapters {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((montoDesde.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(montoDesde.Value));
+                this.Adapter.SelectCommand.Parameters[3].Value = ((decimal)(montoDesde.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((montoHasta.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(montoHasta.Value));
+                this.Adapter.SelectCommand.Parameters[4].Value = ((decimal)(montoHasta.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -1021,7 +973,7 @@ namespace Reportes.DataSetMovTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetMov.SP_REPORTE_MOVIMIENTOSDataTable GetData(global::System.Nullable<int> idCliente, global::System.Nullable<int> idTipoCuenta, global::System.Nullable<int> montoDesde, global::System.Nullable<int> montoHasta, global::System.Nullable<global::System.DateTime> fechaDesde, global::System.Nullable<global::System.DateTime> fechaHasta) {
+        public virtual DataSetMov.SP_REPORTE_MOVIMIENTOSDataTable GetData(global::System.Nullable<int> idCliente, global::System.Nullable<int> idTipoCuenta, global::System.Nullable<decimal> montoDesde, global::System.Nullable<decimal> montoHasta, global::System.Nullable<global::System.DateTime> fechaDesde, global::System.Nullable<global::System.DateTime> fechaHasta) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((idCliente.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((int)(idCliente.Value));
@@ -1036,13 +988,13 @@ namespace Reportes.DataSetMovTableAdapters {
                 this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((montoDesde.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[3].Value = ((int)(montoDesde.Value));
+                this.Adapter.SelectCommand.Parameters[3].Value = ((decimal)(montoDesde.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             if ((montoHasta.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[4].Value = ((int)(montoHasta.Value));
+                this.Adapter.SelectCommand.Parameters[4].Value = ((decimal)(montoHasta.Value));
             }
             else {
                 this.Adapter.SelectCommand.Parameters[4].Value = global::System.DBNull.Value;
