@@ -196,6 +196,7 @@ namespace Reportes
             this.dgvClientes.RowTemplate.Height = 25;
             this.dgvClientes.Size = new System.Drawing.Size(237, 126);
             this.dgvClientes.TabIndex = 1;
+            this.dgvClientes.Visible = false;
             this.dgvClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellContentClick);
             // 
             // idCliente

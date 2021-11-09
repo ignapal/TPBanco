@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\BancoFront.csproj": {}
+    "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\BancoFront.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
+    "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj",
+        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj",
         "projectName": "BancoBackend",
-        "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj",
+        "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj",
         "packagesPath": "C:\\Users\\lnapal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\obj\\",
+        "outputPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -72,14 +72,14 @@
         }
       }
     },
-    "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\BancoFront.csproj": {
+    "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\BancoFront.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\BancoFront.csproj",
+        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\BancoFront.csproj",
         "projectName": "BancoFront",
-        "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\BancoFront.csproj",
+        "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\BancoFront.csproj",
         "packagesPath": "C:\\Users\\lnapal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\obj\\",
+        "outputPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -100,11 +100,11 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
-                "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj"
+              "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
+                "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj"
               },
-              "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\Reportes\\Reportes.csproj": {
-                "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\Reportes\\Reportes.csproj"
+              "C:\\Users\\lnapal\\Desktop\\TPBanco\\Reportes\\Reportes.csproj": {
+                "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\Reportes\\Reportes.csproj"
               }
             }
           }
@@ -150,11 +150,11 @@
         }
       }
     },
-    "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\Reportes\\Reportes.csproj": {
+    "C:\\Users\\lnapal\\Desktop\\TPBanco\\Reportes\\Reportes.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\Reportes\\Reportes.csproj",
+        "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\TPBanco\\Reportes\\Reportes.csproj",
         "projectName": "Reportes",
-        "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\Reportes\\Reportes.csproj",
+        "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\Reportes\\Reportes.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

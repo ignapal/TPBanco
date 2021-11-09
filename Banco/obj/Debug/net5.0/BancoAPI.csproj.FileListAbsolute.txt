@@ -72,3 +72,4 @@ C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.dll
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\ref\BancoAPI.dll
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.pdb
 C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.genruntimeconfig.cache
+C:\Users\lnapal\Desktop\TPBanco\Banco\obj\Debug\net5.0\BancoAPI.csproj.CopyComplete

@@ -208,10 +208,12 @@ namespace Reportes
                 dgvClientes.Enabled = false;
                 idClienteSeleccionado = 0;
                 lblCliente.Text = "";
+                dgvClientes.Visible = false;
             }
             else
             {
                 dgvClientes.Enabled = true;
+                dgvClientes.Visible = true;
             }
         }
     }

@@ -1583,11 +1583,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\BancoFront.csproj",
+      "projectUniqueName": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\BancoFront.csproj",
       "projectName": "BancoFront",
-      "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\BancoFront.csproj",
+      "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\BancoFront.csproj",
       "packagesPath": "C:\\Users\\lnapal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoFront\\obj\\",
+      "outputPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoFront\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1608,11 +1608,11 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
-              "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\BancoBackend\\BancoBackend.csproj"
+            "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj": {
+              "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\BancoBackend\\BancoBackend.csproj"
             },
-            "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\Reportes\\Reportes.csproj": {
-              "projectPath": "C:\\Users\\lnapal\\Desktop\\UTN\\TPBanco\\Reportes\\Reportes.csproj"
+            "C:\\Users\\lnapal\\Desktop\\TPBanco\\Reportes\\Reportes.csproj": {
+              "projectPath": "C:\\Users\\lnapal\\Desktop\\TPBanco\\Reportes\\Reportes.csproj"
             }
           }
         }
